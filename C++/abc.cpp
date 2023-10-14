@@ -3,8 +3,9 @@
 using namespace std;
 int main()
 {
-    int  ;
-    cout <<  ;
-    cin >>  ;
+    int a ;
+    cin >> a ;
+    cout << a ;
+    
 return 0;
 }
