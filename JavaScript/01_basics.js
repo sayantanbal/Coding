@@ -10,7 +10,6 @@ let name = "Sayantan"
 let number = 10
 let isLoggedIn = false
 
-
 // number = 2^53
 // bigint 
 // string => "" or ''
