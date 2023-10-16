@@ -15,7 +15,7 @@ let isLoggedIn = false
 // bigint 
 // string => "" or ''
 // boolean => true or false
-// null --> is a standalone value! It's a type. It's a special type 
+// null --> is a standalone value! It's a type. It's a special type, an object.
 // undefined =>
 // symbol => unique
 
