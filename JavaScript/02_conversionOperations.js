@@ -68,12 +68,12 @@
 
 
 // let abc = (+true);
-// let abc = (+false);
-// console.log(typeof abc);
+let abc = (+false);
+console.log(typeof abc);
 
 
 
-gameCounter = 100;
+gameCounter = 100; // if you don't specify let var const etc then it's a global variable
 
 gameCounter++;
 console.log(gameCounter);
