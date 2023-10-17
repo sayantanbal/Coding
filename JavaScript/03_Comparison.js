@@ -47,3 +47,31 @@ if you take a variable and initialise it with null it works the same. means comp
 // console.log(x >= 0);
 // console.log(x == 0);
 // console.log(x <= 0)
+
+
+/****************************Memory******************************** */
+
+
+// Stack and Heap
+
+// stack => primitive, heap => non primitive\
+
+let myName = "Sayantan";
+let anotherName = myName;
+
+anotherName = "meow meow";
+
+console.log(myName);
+console.log(anotherName);
+
+let user1 = {
+    email : "abc@gmail.com",
+    upi_ID : "abc@okaxis"
+}
+
+let user2 = user1
+
+user2.email = "meow@email.com"
+
+console.log(user1.email);
+console.log(user2.email);

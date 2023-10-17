@@ -53,19 +53,26 @@
 // console.log(+"    "); // means (+true); converts to a number and gives 0.
 
 // let abc = (+true);
-let abc = +false;
-console.log(typeof abc);
+// let abc = +false;
+// console.log(typeof abc);
 
-gameCounter = 100; // if you don't specify let var const etc then it's a global variable
+// gameCounter = 100; // if you don't specify let var const etc then it's a global variable
 
-gameCounter++;
-console.log(gameCounter);
-++gameCounter;
-console.log(gameCounter);
+// gameCounter++;
+// console.log(gameCounter);
+// ++gameCounter;
+// console.log(gameCounter);
 
-console.log(gameCounter++);
-console.log(++gameCounter);
-console.log(--gameCounter);
-console.log(gameCounter--);
-// console.log(++gameCounter--);
+// console.log(gameCounter++);
+// console.log(++gameCounter);
+// console.log(--gameCounter);
+// console.log(gameCounter--);
+// // console.log(++gameCounter--);
 // console.log(--gameCounter++); both are wrong syntax.
+
+
+
+
+
+
+
