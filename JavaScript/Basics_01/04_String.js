@@ -4,7 +4,7 @@
 
 // console.log(`my name is ${name} and my github repo is  ${repoCount}`); // modern day practice
 
-const gameName = new String ("wolves-of-heaven")
+let gameName = new String ("wolves of heaven")
 
 // console.log(gameName[7])
 // // console.log(abc.__proto__); => object
@@ -25,16 +25,18 @@ const gameName = new String ("wolves-of-heaven")
 // const anotherString1 = gameName.slice(-2,6)
 // // u can use -ve values in slice. it means it start counting from reverse.
 
-const abc = "     abc     "
-console.log(abc);
-console.log(abc.trim());
+// const abc = "     abc     "
+// console.log(abc);
+// console.log(abc.trim());
 
 
-const url = "www.google.com"
-let abc2 = url.replace("google", "facebook")
-console.log(abc2);
+// const url = "www.google.com"
+// let abc2 = url.replace("google", "facebook")
+// console.log(abc2);
 
 
-console.log(url.includes("facebook"));
+// console.log(url.includes("facebook"));
 
-console.log(gameName.split('-'));
+
+let x = gameName.split(' ') //split retuns an array. dividing a whole string into chunks based on given argument.
+console.log(x);
