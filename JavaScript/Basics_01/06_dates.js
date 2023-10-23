@@ -1,8 +1,8 @@
 // dates are usually declared in miliseconds.
 // date type is object
 
-let myDate = new Date;
-// console.log(myDate);
+let myDate = new Date();
+console.log(myDate);
 // console.log(myDate.toString()); // gives date time along with GMT+ and what standard time.
 // console.log(myDate.toISOString());
 // console.log(myDate.toLocaleString()); // gives date along with time
@@ -18,7 +18,7 @@ let myDate = new Date;
 let newDate1 = new Date ("2023-10-10")// but when written under " ". we're using yyyy-mm-dd. then month is starting from 1 instead of 0.
 // console.log(newDate1.toDateString());
 // console.log(newDate1.toLocaleString()); // shows date and time.
-// console.log(newDate1.toLocaleDateString());
+// console.log(newDate1.toLocaleDateString()); // prints the current date with dd/mm/yyyy
 
 // // you can reverse the order. i.e. mm-dd-yyyy
 
@@ -35,8 +35,8 @@ let newDate1 = new Date ("2023-10-10")// but when written under " ". we're using
 
 
 let MynewDate = new Date
-console.log(MynewDate.getMinutes());
-console.log(MynewDate.getMonth()+1);
+// console.log(MynewDate.getMinutes());
+// console.log(MynewDate.getMonth()+1);
 
 
 // we can customize .toLocaleString() property.
