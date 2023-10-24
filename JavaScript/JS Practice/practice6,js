@@ -1,0 +1,21 @@
+/* Write a JavaScript program where the program takes a random integer between 10 and 100, and the user is then prompted to input a guess number. The program displays a message "Good Work" if the input matches the guess number otherwise "Not matched" */
+
+const prompt = require("prompt-sync")({ sigint: true });
+
+let min = 10;
+let max = 100;
+let guessedRight;
+let randomNumber = Math.floor(Math.random() * (max - min + 1) + min);
+
+console.log(randomNumber);
+
+for (let attempts = 1; !guessedRight; attempts++) {
+  let guessedNumber = Number(prompt("Enter your guess "));
+  if (guessedNumber === randomNumber) {
+    console.log(
+      `You have guessed it right, ${randomNumber} in ${attempts} attempts`
+    );
+  } else {
+    console.log(`You have guessed it wrong`);
+  }
+}
