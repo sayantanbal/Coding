@@ -15,6 +15,7 @@ for (let attempts = 1; !guessedRight; attempts++) {
     console.log(
       `You have guessed it right, ${randomNumber} in ${attempts} attempts`
     );
+    guessedRight = true
   } else {
     console.log(`You have guessed it wrong`);
   }
