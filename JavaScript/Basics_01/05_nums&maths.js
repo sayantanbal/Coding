@@ -12,8 +12,9 @@
 // const otherNumber = 122.55696
 // console.log(otherNumber.toPrecision(4)); // the argument means how much value to be focused on.
 
-// const hundreds = 100002310;
-// console.log(hundreds.toLocaleString('en-IN')); // converts to a string with commas for lagre numbers. argument takes how to show te value
+const hundreds = 1000000;
+console.log(hundreds.toLocaleString()); // converts to a string with commas for lagre numbers. argument takes how to show the value
+console.log(hundreds.toLocaleString('en-IN')); // converts to a string with commas for lagre numbers. argument takes how to show the value
 
 /************************************ maths *********************************/
 
