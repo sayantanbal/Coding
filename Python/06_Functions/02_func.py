@@ -19,7 +19,7 @@ c = average(5, 6, 7, 1)
 print(c)
 
 
-# def name(**name):
+# def name(**name): # ** is used when we make a dictionary
 #   # print(type(name))
 #   print("Hello,", name["fname"], name["mname"], name["lname"])
 
