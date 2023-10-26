@@ -19,14 +19,16 @@ marks = [3, 5, 6, "Harry", True, 6, 7 , 2, 32, 345, 23]
 #   print("No")
 
 # Same thing applies for strings as well!
-# if "Ha" in "Harry":
-#   print("Yes")
+if "Hr" in "Harry" : #checks if present porpor
+  print("Yes")
+else :
+  print("no")
 
 # print(marks[0:7])
 # print(marks[1:9])
 # print(marks[1:9:3])
 
 lst = [i*i for i in range(10)]
-print(lst)
-lst = [i*i for i in range(10) if i%2==0]
-print(lst)
+# print(lst)
+# lst = [i*i for i in range(10) if i%2==0]
+# print(lst)
