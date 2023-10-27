@@ -1,3 +1,15 @@
+
+#svg2{
+    /* width: 611.86px; */
+    transform: scale(1.20289);
+}
+
+#MapDiv{
+    width: 611.86px;
+}
+
+
+
 #IN-AN{
     fill: rgb(224, 101, 101);
           stroke: rgb(247, 247, 247);
@@ -271,3 +283,8 @@
 }
 
 
+
+
+.SVG:hover{
+    fill: rgb(69, 202, 42);;
+}
