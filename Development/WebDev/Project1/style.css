@@ -1,290 +1,35 @@
-
-#svg2{
-    /* width: 611.86px; */
-    transform: scale(1.20289);
+* {
+  margin: 0;
+  padding: 0;
 }
 
-#MapDiv{
-    width: 611.86px;
+body {
+  background-color: #000000;
 }
-
-
-
-#IN-AN{
-    fill: rgb(224, 101, 101);
-          stroke: rgb(247, 247, 247);
-          stroke-width: 0.831332px;
-}
-
-
-#IN-AP{
-    fill: rgb(224, 101, 101);
-          stroke: rgb(247, 247, 247);
-          stroke-width: 0.831332px;
+#svg2 {
+  /* width: 611.86px; */
+  width: 611.86px;
+  display: block;
+  margin: 10% auto;
+  /* transform: scale(1.20289); */
 }
 
 
-#IN-AR{
-    fill: rgb(224, 101, 101);
-          stroke: rgb(247, 247, 247);
-          stroke-width: 0.831332px;
+#MapDiv {
+  /* width: 1000px;
+  height: 1000px; */
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
-#IN-AS{
-    fill: rgb(224, 101, 101);
-          stroke: rgb(247, 247, 247);
-          stroke-width: 0.831332px;
+.MapDiv :hover {
+  fill: aqua;
 }
-
-
-#IN-BR{
-    fill: rgb(224, 101, 101);
-          stroke: rgb(247, 247, 247);
-          stroke-width: 0.831332px;
-}
-
-
-#IN-CH{
-    fill: rgb(224, 101, 101);
-          stroke: rgb(247, 247, 247);
-          stroke-width: 0.831332px;
-}
-
-
-#IN-CT{
-    fill: rgb(224, 101, 101);
-          stroke: rgb(247, 247, 247);
-          stroke-width: 0.831332px;
-}
-
-
-#IN-DD{
-    fill: rgb(224, 101, 101);
-          stroke: rgb(247, 247, 247);
-          stroke-width: 0.831332px;
-}
-
-
-#IN-DL{
-    fill: rgb(224, 101, 101);
-          stroke: rgb(247, 247, 247);
-          stroke-width: 0.831332px;
-}
-
-
-#IN-DN{
-    fill: rgb(224, 101, 101);
-          stroke: rgb(247, 247, 247);
-          stroke-width: 0.831332px;
-}
-
-
-#IN-GA{
-    fill: rgb(224, 101, 101);
-          stroke: rgb(247, 247, 247);
-          stroke-width: 0.831332px;
-}
-
-
-#IN-GJ{
-    fill: rgb(224, 101, 101);
-          stroke: rgb(247, 247, 247);
-          stroke-width: 0.831332px;
-}
-
-
-#IN-HP{
-    fill: rgb(224, 101, 101);
-          stroke: rgb(247, 247, 247);
-          stroke-width: 0.831332px;
-}
-
-
-#IN-HR{
-    fill: rgb(224, 101, 101);
-          stroke: rgb(247, 247, 247);
-          stroke-width: 0.831332px;
-}
-
-
-#IN-JH{
-    fill: rgb(224, 101, 101);
-          stroke: rgb(247, 247, 247);
-          stroke-width: 0.831332px;
-}
-
-
-#IN-JK{
-    fill: rgb(224, 101, 101);
-          stroke: rgb(247, 247, 247);
-          stroke-width: 0.831332px;
-}
-
-
-#IN-JH{
-    fill: rgb(224, 101, 101);
-          stroke: rgb(247, 247, 247);
-          stroke-width: 0.831332px;
-}
-
-
-#IN-KA{
-    fill: rgb(224, 101, 101);
-          stroke: rgb(247, 247, 247);
-          stroke-width: 0.831332px;
-}
-
-
-#IN-KL{
-    fill: rgb(224, 101, 101);
-          stroke: rgb(247, 247, 247);
-          stroke-width: 0.831332px;
-}
-
-
-#IN-LD{
-    fill: rgb(224, 101, 101);
-          stroke: rgb(247, 247, 247);
-          stroke-width: 0.831332px;
-}
-
-
-#IN-KL{
-    fill: rgb(224, 101, 101);
-          stroke: rgb(247, 247, 247);
-          stroke-width: 0.831332px;
-}
-
-
-#IN-MH{
-    fill: rgb(224, 101, 101);
-          stroke: rgb(247, 247, 247);
-          stroke-width: 0.831332px;
-}
-
-
-#IN-ML{
-    fill: rgb(224, 101, 101);
-          stroke: rgb(247, 247, 247);
-          stroke-width: 0.831332px;
-}
-
-
-#IN-MH{
-    fill: rgb(224, 101, 101);
-          stroke: rgb(247, 247, 247);
-          stroke-width: 0.831332px;
-}
-
-
-#IN-MN{
-    fill: rgb(224, 101, 101);
-          stroke: rgb(247, 247, 247);
-          stroke-width: 0.831332px;
-}
-
-
-#IN-MP{
-    fill: rgb(224, 101, 101);
-          stroke: rgb(247, 247, 247);
-          stroke-width: 0.831332px;
-}
-
-
-#IN-MZ{
-    fill: rgb(224, 101, 101);
-          stroke: rgb(247, 247, 247);
-          stroke-width: 0.831332px;
-}
-
-
-#IN-NL{
-    fill: rgb(224, 101, 101);
-          stroke: rgb(247, 247, 247);
-          stroke-width: 0.831332px;
-}
-
-
-#IN-OR{
-    fill: rgb(224, 101, 101);
-          stroke: rgb(247, 247, 247);
-          stroke-width: 0.831332px;
-}
-
-
-#IN-PB{
-    fill: rgb(224, 101, 101);
-          stroke: rgb(247, 247, 247);
-          stroke-width: 0.831332px;
-}
-
-
-#IN-PY{
-    fill: rgb(224, 101, 101);
-          stroke: rgb(247, 247, 247);
-          stroke-width: 0.831332px;
-}
-
-
-#IN-RJ{
-    fill: rgb(224, 101, 101);
-          stroke: rgb(247, 247, 247);
-          stroke-width: 0.831332px;
-}
-
-
-#IN-SK{
-    fill: rgb(224, 101, 101);
-          stroke: rgb(247, 247, 247);
-          stroke-width: 0.831332px;
-}
-
-
-#IN-TG{
-    fill: rgb(224, 101, 101);
-          stroke: rgb(247, 247, 247);
-          stroke-width: 0.831332px;
-}
-
-
-#IN-TN{
-    fill: rgb(224, 101, 101);
-          stroke: rgb(247, 247, 247);
-          stroke-width: 0.831332px;
-}
-
-
-#IN-TR{
-    fill: rgb(224, 101, 101);
-          stroke: rgb(247, 247, 247);
-          stroke-width: 0.831332px;
-}
-
-
-#IN-UP{
-    fill: rgb(224, 101, 101);
-          stroke: rgb(247, 247, 247);
-          stroke-width: 0.831332px;
-}
-
-
-#IN-UT{
-    fill: rgb(224, 101, 101);
-          stroke: rgb(247, 247, 247);
-          stroke-width: 0.831332px;
-}
-
-
-#IN-WB{
-    fill: rgb(224, 101, 101);
-          stroke: rgb(247, 247, 247);
-          stroke-width: 0.831332px;
-}
-
-
-
-
-.SVG:hover{
-    fill: rgb(69, 202, 42);;
+.MapDiv path {
+  fill: rgb(224, 101, 101);
+  stroke: rgb(247, 247, 247);
+  stroke-width: 0.831332px;
+  /* data-stroke-width = "1"; */
 }
