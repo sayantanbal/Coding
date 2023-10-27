@@ -6,7 +6,7 @@
 body {
   background-color: #000000;
 }
-#svg2 {
+#svg {
   /* width: 611.86px; */
   width: 611.86px;
   display: block;
@@ -18,7 +18,7 @@ body {
 #MapDiv {
   /* width: 1000px;
   height: 1000px; */
-  border: 2px solid black;
+  /* border: 2px solid black; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,5 +31,6 @@ body {
   fill: rgb(224, 101, 101);
   stroke: rgb(247, 247, 247);
   stroke-width: 0.831332px;
+  
   /* data-stroke-width = "1"; */
 }
