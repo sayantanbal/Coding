@@ -21,7 +21,7 @@ for (let i = 1; i <= 10; i++) {
 }
 let myArray = ["flash", "batman", "superman"]
 //console.log(myArray.length);
-for (let index = 0; index < myArray.length; index++) {
+for (let index = 0; index < myArray.length; index++) {  // here out of bound is not valid. it shows undefined if user asks for values beyond array.
     const element = myArray[index];
     //console.log(element);
     
