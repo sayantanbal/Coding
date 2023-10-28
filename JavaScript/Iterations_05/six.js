@@ -10,9 +10,12 @@
 
 const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-// const newNums = myNums.filter( (num) => {
-//     return num > 4
-// } )
+
+// filter returns value based on a condition
+const newNums1 = myNums.filter( (num) => num > 4 )
+const newNums2 = myNums.filter( (num) => {num > 4} )  // when used in curly braces scope changes. so we have to use "return"
+
+console.log(newNums2);
 
 // const newNums = []
 
@@ -42,4 +45,4 @@ const books = [
   userBooks = books.filter( (bk) => { 
     return bk.publish >= 1995 && bk.genre === "History"
 })
-  console.log(userBooks);
+  // console.log(userBooks);
