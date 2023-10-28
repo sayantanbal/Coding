@@ -34,7 +34,7 @@ const myObject = {
     game2: 'Spiderman'
 }
 
-// for (const [key, value] of myObject) {
+// for (const [key, value] of myObject) {  // object is not iterable by for-of loop it can be iteraterd by for-in loop
 //     console.log(key, ':-', value);
     
 // }
