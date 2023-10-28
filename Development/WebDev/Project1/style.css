@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: #000000;
+  background-color: #ffffff;
 }
 #svg {
   /* width: 611.86px; */
@@ -24,13 +24,15 @@ body {
   align-items: center;
 }
 
-.MapDiv :hover {
-  fill: aqua;
-}
+#MapDiv :hover {
+    fill: aqua;
+  }
+
+
 .MapDiv path {
   fill: rgb(224, 101, 101);
   stroke: rgb(247, 247, 247);
-  stroke-width: 0.831332px;
+  stroke-width: 1px;
   
   /* data-stroke-width = "1"; */
 }
