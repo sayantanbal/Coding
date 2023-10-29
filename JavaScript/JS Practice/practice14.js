@@ -2,3 +2,6 @@
 //Note: Strict mode -> 10, 15, 31 : Soft mode -> 24, 22, 31 or 22, 22, 31
 
 
+
+
+
