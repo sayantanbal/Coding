@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include<math.h>
 int main()
 {
     // char a = '4';
@@ -6,7 +7,9 @@ int main()
     // printf("\n\n%d\n\n", (a+b));
 
     b = -(~b);
-    printf("%d", b);
+    printf("%d\n", b);
+
+    printf("%.20f \n",M_PI);
 
 
     // b = b << 2;
