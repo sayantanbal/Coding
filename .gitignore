@@ -4,4 +4,8 @@ C/Basic_Programs/first.exe
 C/Basic_Programs/first
 C++/abc
 C++/abc
+<<<<<<< HEAD
 C/Project/3_NumberGuessingGame.c
+=======
+C++/abc
+>>>>>>> b16f6c2 (lgtm)
