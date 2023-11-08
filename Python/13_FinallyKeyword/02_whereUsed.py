@@ -1,0 +1,1 @@
+# Used to execute a block of code everytime for sure. suppose you're connected to a DB and editing a file. after the work is done you've to close the DB file; then the program related to it is written under finnaly clause 
