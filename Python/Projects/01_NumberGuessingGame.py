@@ -25,5 +25,5 @@ def number_guessing_game():
         else:
             print(f"Congratulations! You guessed the number {secret_number} in {attempts} attempts.")
 
-# if __name__ == "__main__":
-number_guessing_game()
+if __name__ == "__main__":
+    number_guessing_game()
