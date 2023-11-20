@@ -1,5 +1,4 @@
-<<<<<<< HEA
-=======
+
 #include<stdio.h>
 #include<math.h>
 int main(){
@@ -13,4 +12,3 @@ int main(){
 
 return 0;
 }
->>>>>>> c1eebcbb88e8c710e298e42eef501da59eb99d72
