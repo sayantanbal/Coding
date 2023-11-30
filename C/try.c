@@ -1,14 +1,22 @@
-// program to multiply first 10 natural numbers
+// a program to add n terms of an arithmetic progression
+
 #include <stdio.h>
+
+
 int main()
 {
-    int i, n, mul = 1;
-    printf("Enter the value of n: ");
+    int n, a, d, i, sum = 0;
+    printf("Enter the number of terms in AP: ");
     scanf("%d", &n);
-    for (i = 1; i <= n; i++)
+    printf("Enter the first term: ");
+    scanf("%d", &a);
+    printf("Enter the common difference: ");
+    scanf("%d", &d);
+    for (i = 0; i < n; i++)
     {
-        mul = mul * i;
+        sum += a;
+        a += d;
     }
-    printf("Multiplication of first %d natural numbers = %d", n, mul);
+    printf("Sum of %d terms of AP is %d\n", n, sum);
     return 0;
 }
