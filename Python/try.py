@@ -17,14 +17,17 @@
 
 
 
-from pytube import Playlist
-playlist = Playlist("https://youtube.com/playlist?list=PLu0W_9lII9aikXkRE0WxDt1vozo3hnmtR&si=P_wRmu3uoL4mVBO0")
+# from pytube import Playlist
+# playlist = Playlist("https://youtube.com/playlist?list=PLu0W_9lII9aikXkRE0WxDt1vozo3hnmtR&si=P_wRmu3uoL4mVBO0")
 
-print(f"tottal videos are {len(playlist.video_urls)}")
+# print(f"tottal videos are {len(playlist.video_urls)}")
 
-for video in playlist.videos :
-    print(video.streams.filter(file_extension="mp4"))
-    # video.streams.first().download("D:\PHP Harry")
+# for video in playlist.videos :
+#     print(video.streams.filter(file_extension="mp4"))
+#     # video.streams.first().download("D:\PHP Harry")
 
 
-# from pytube import YouTube
+# # from pytube import YouTube
+
+
+
