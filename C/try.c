@@ -1,22 +1,18 @@
-// a program to add n terms of an arithmetic progression
+// a program to revese a user given number
 
 #include <stdio.h>
 
-
 int main()
 {
-    int n, a, d, i, sum = 0;
-    printf("Enter the number of terms in AP: ");
-    scanf("%d", &n);
-    printf("Enter the first term: ");
-    scanf("%d", &a);
-    printf("Enter the common difference: ");
-    scanf("%d", &d);
-    for (i = 0; i < n; i++)
+    int num, rev = 0, rem;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    while (num != 0)
     {
-        sum += a;
-        a += d;
+        rem = num % 10;
+        rev = rev * 10 + rem;
+        num /= 10;
     }
-    printf("Sum of %d terms of AP is %d\n", n, sum);
+    printf("The reverse of the number is: %d", rev);
     return 0;
 }
