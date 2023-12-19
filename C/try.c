@@ -1,18 +1,15 @@
-// a program to revese a user given number
-
 #include <stdio.h>
-
 int main()
 {
-    int num, rev = 0, rem;
-    printf("Enter a number: ");
-    scanf("%d", &num);
-    while (num != 0)
-    {
-        rem = num % 10;
-        rev = rev * 10 + rem;
-        num /= 10;
-    }
-    printf("The reverse of the number is: %d", rev);
+    int c, d = 0;
+    int a = 1;
+    int b = 1;
+    c = a || --b;
+    printf("a = % d, b = % d, c = % d, d = % d\n ", a, b, c, d);
+
+    // printf("%d\n", 0||1);
+    
+    d= a-- && --b;
+    printf("a = % d, b = % d, c = % d, d = % d\n ", a, b, c, d);
     return 0;
 }
