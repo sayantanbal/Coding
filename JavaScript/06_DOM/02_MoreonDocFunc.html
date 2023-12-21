@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai aur code</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="parent">
+        <!-- this is a comment -->
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent') // querySelector returns the first element that matches a specified CSS selector(s) in the document.
+    // console.log(parent);
+    // console.log(parent.children); // returns a collection of an element's child elements, as an HTMLCollection object.
+
+    // console.log(parent.children[1].innerHTML);
+
+    // for (let i = 0; i < parent.children.length; i++) {
+    //      console.log(parent.children[i].innerHTML);
+        
+    // }
+    parent.children[1].style.color = "orange"
+    // console.log(parent.firstElementChild); // returns the first child element of an element.
+    // console.log(parent.lastElementChild); // returns the last child element of an element.
+
+    const dayOne = document.querySelector('.day') // queryselector returns the first element that value matches first in the document. as the function traverses the whole tree of the document it is an expensive function. so we must use it least times.
+
+
+    // console.log(dayOne);
+    // console.log(dayOne.parentElement); // returns the parent element of the specified element.
+
+    // console.log(dayOne.nextElementSibling); // returns the element immediately following the specified element, in the same tree level.
+
+    console.log("NODES: ", parent.childNodes); // returns a collection of a node's child nodes, as a NodeList object. takes in count of everythng including divs, comments, text nodes, line brakes, enters and all.
+    // enter is taken as a text node.
+
+    // childNodes is a property of the parent element. it is not a function. it is a property that returns a collection of all the child nodes of the parent element. It is very important as react uses it to render the virtual DOM.
+</script>
+</html>

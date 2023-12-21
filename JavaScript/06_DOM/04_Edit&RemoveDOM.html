@@ -12,6 +12,8 @@
     </ul>
 </body>
 <script>
+
+    // this process traverse the dom tree
     function addLanguage(langName){
         const li = document.createElement('li');
         li.innerHTML = `${langName}`
@@ -20,6 +22,8 @@
     addLanguage("python")
     addLanguage("typescript")
 
+
+    // this process does not traverse the dom tree
     function addOptiLanguage(langName){
         const li = document.createElement('li');
         li.appendChild(document.createTextNode(langName))
@@ -28,7 +32,21 @@
     addOptiLanguage('golang')
 
     //Edit
-    const secondLang = document.querySelector("li:nth-child(2)")
+
+
+
+    //nth-child is a jQuery selector. It is used to select the element with a specific index number. The :nth-child(n) selector selects all elements that are the nth child, regardless of type, of their parent.
+    
+    // Tip: Use the :nth-of-type() selector to select all elements that are the nth child, of a particular type, of their parent.
+    // syntax : :nth-child(n|even|odd|formula)
+    
+    //     n -->	The index of each child to match. Must be a number. The first       element has the index number 1.
+    //     even -->	Selects each even child element
+    //     odd --> Selects each odd child element
+    //     formula -->	Specifies which child element(s) to be selected with a formula (an + b).
+    // Example: p:nth-child(3n+2) selects each 3rd paragraph, starting at the 2nd child element
+    
+    const secondLang = document.querySelector("li:nth-child(2)") 
     console.log(secondLang);
     //secondLang.innerHTML = "Mojo"
     const newli = document.createElement('li')
