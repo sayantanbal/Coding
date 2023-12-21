@@ -23,7 +23,7 @@ if (Object.keys(emptyObj).length === 0) {
     console.log("Object is empty");
 }
 
-// Nullish Coalescing Operator (??): null undefined
+// Nullish Coalescing Operator (??): It is used to check if the value is null or undefined. If it is null or undefined then it returns the value that is assigned after ??.
 
 let val1;
 // val1 = 5 ?? 10

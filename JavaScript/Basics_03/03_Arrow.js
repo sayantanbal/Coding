@@ -58,9 +58,9 @@ const obj1 = {
 obj1.print();
 
 /*
-If func is declared normally within a object then this keyword refers that object. scope is within the object
+If func is declared normally within a object then "this" keyword refers that object. scope is within the object
 
-But, If func is declared as an arrow func within a object then this keyword doesn't refer to that object. it is a global object.
+But, If func is declared as an arrow func within a object then "this" keyword doesn't refer to that object. it is a global object.
 */
 
 

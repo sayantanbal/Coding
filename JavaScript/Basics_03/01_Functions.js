@@ -13,7 +13,7 @@
 // sayMyName() --> Execute
 // sayMyName --> Reference
 
-// function addTwoNumbers(number1, number2){ // number1, number2 is parameters
+// function addTwoNumbers(number1, number2){ // number1, number2 are function parameters
 
 //     console.log(number1 + number2);
 // }

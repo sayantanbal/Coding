@@ -28,4 +28,43 @@
         </ul>
     </div>
 </body>
+
+
+<script>
+        document.getElementById('title');
+        document.getElementById('title').id;
+        // document.getElementsById.Class //this does not gives you the class name as class is used by "ClassName" behind the process. outputs "undefined".
+        //so the following command is used - 
+        document.getElementsById('title').ClassName;
+        // this gives proper classname.
+        document.getElementById('title').getAttribute();
+        // this takes attribute name as argument i.e. 'id' 'class'  etc.
+        document.getElementById('title').setAttribute();
+        // takes two arguments - attribute name and value. always overwrites the value.
+
+        const title  = document.getElementById('title');
+        // now taht we have stored the element in a variable, we can use it to access the element. and add or substract its properties.
+        title.style.color = 'red';
+        title.style.backgroundColor = 'black';
+
+
+        title.textContent; // gives whatever value is inside the element. you can change it further by assigning a new value to it. prints all value inside it including the hidden ones.suppose you have a span inside the h1 tag and you have hidden it using display:none; then it will also print the hidden text.
+
+        title.innerText; // gives whatever value is inside the element. you can change it further by assigning a new value to it. prints only the visible text.suppose you have a span inside the h1 tag and you have hidden it using display:none; then it will not print the hidden text.
+
+        title.innerHTML; // gives the html code inside the element. you can change it further by assigning a new value to it.suppose you have a span inside the h1 tag and you have hidden it using display:none; then it will also print the hidden text.along with html syntax. 
+
+        document.querySelector('h1');
+        document.querySelector('#title');
+        document.querySelector('input[type="password"]');
+        
+        // this will give you the first h1 tag in the document. you can also use class or id to select the element. if you use class or id then you have to use . or # respectively before the class or id name. if you use class or id then it will give you the first element with that class or id. if you want to select all the elements with that class or id then you have to use querySelectorAll() method.
+
+        document.querySelectorAll('h1');//gives all 'h1' tags in the document. returns a node list. you can use forEach() method to iterate through the list.
+        // nodelist is not an array. it is an array like object. it has length property and have forEach() method. but you have to convert it into an array to use full functionality of array. you can use "Array.from()" method to convert it into an array.
+
+        document.getElementsByClassName('list-item');
+        // this will give you all the elements with the class name 'list-item'. returns a HTMLCollection. you can not use forEach() method to iterate through the list. you have to convert it to array to use forEach() method. use "Array.from()" method to convert it into an array.
+    </script>
+
 </html>
