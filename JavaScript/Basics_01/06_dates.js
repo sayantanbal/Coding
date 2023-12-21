@@ -1,10 +1,10 @@
 // dates are usually declared in miliseconds.
 // date type is object
 
-let myDate = new Date();
-console.log(myDate);
+// let myDate = new Date();
+// console.log(myDate);
 // console.log(myDate.toString()); // gives date time along with GMT+ and what standard time.
-// console.log(myDate.toISOString());
+// console.log(myDate.toISOString()); //ISOString is the standard format of date and time.
 // console.log(myDate.toLocaleString()); // gives date along with time
 // console.log(myDate.toDateString());
 
@@ -15,22 +15,23 @@ console.log(myDate);
 // console.log(newDate.toLocaleString()); // shows date and time.
 // console.log(newDate.toLocaleDateString()); // shows date only
 
-let newDate1 = new Date ("2023-10-10")// but when written under " ". we're using yyyy-mm-dd. then month is starting from 1 instead of 0.
+// let newDate1 = new Date ("2023-10-10")// but when written under " ". we're using yyyy-mm-dd. then month is starting from 1 instead of 0.
 // console.log(newDate1.toDateString());
 // console.log(newDate1.toLocaleString()); // shows date and time.
 // console.log(newDate1.toLocaleDateString()); // prints the current date with dd/mm/yyyy
 
 // // you can reverse the order. i.e. mm-dd-yyyy
 
-// let newDate2 = new Date ("30-12-20003") // wrong js only takes mm-dd-yyyy or dd-mm-yyyy
-// console.log(newDate2.toDateString());
+let newDate2 = new Date ("2023-12-30") // wrong js only takes mm-dd-yyyy or yyyy-mm-dd
+// here it takes 12 as month and 30 as date. when written under " ". month is starting from 1 instead of 0.
+console.log(newDate2.toDateString());
 
 
 
 
 // let TimeStamp = Date.now()
-// // console.log(TimeStamp); 
-// // console.log(newDate1.getTime());
+// console.log(TimeStamp); 
+// console.log(newDate1.getTime());
 // console.log(Math.floor(Date.now()/1000));
 
 

@@ -9,25 +9,15 @@ const abc = new Array(1, 2, 3, 4, 5, 6);
 
 // array methods
 
-
 // myArr.push(9)
 // myArr.pop()
 // console.log(myArr);
 // console.log(myArr.length);
 
-
-
 // myArr.unshift(0)
 // myArr.unshift(6)
 // myArr.unshift(6)
 // myArr.shift()
-
-
-
-
-
-
-
 
 // console.log(myArr.includes(9));
 // console.log(myArr.indexOf(6));

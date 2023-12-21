@@ -1,4 +1,4 @@
-// let score = 33 ---> number not Number!
+// let score = 33 ---> "number" not "Number"!
 // let score = "33"
 // let score = "33abc"
 // let score = null;  // null converted into Number gives 0.
@@ -6,7 +6,7 @@
 // true => 1, false => 0.
 
 // console.log(typeof score);
-// // console.log(typeof(score));
+// console.log(typeof(score));
 
 // let valueInInt = Number(score);
 // console.log(typeof(valueInInt));
@@ -49,7 +49,7 @@
 // console.log(true); // gives "true" as a output
 // console.log(+true); // means (+true);converts to a number and gives 1.
 // console.log(true+);// isn't a correct syntax
-// console.log(+""); // means (+false); converts to a number and gives 0.
+console.log(+""); // means (+false); converts to a number and gives 0.
 // console.log(+"    "); // means (+true); converts to a number and gives 0.
 
 // let abc = (+true);
@@ -67,6 +67,8 @@
 // console.log(++gameCounter);
 // console.log(--gameCounter);
 // console.log(gameCounter--);
+
+
 // // console.log(++gameCounter--);
 // console.log(--gameCounter++); both are wrong syntax.
 

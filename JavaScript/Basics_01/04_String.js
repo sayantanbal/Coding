@@ -4,7 +4,10 @@
 
 // console.log(`my name is ${name} and my github repo is  ${repoCount}`); // modern day practice
 
-let gameName = new String ("wolves of heaven")
+// let gameName = new String ("wolves of heaven");
+// console.log(gameName);
+// console.log(typeof gameName);
+// "new" makes an object of specified type. here it's string.
 
 // console.log(gameName[7])
 // // console.log(abc.__proto__); => object
@@ -38,5 +41,5 @@ let gameName = new String ("wolves of heaven")
 // console.log(url.includes("facebook"));
 
 
-let x = gameName.split(' ') //split retuns an array. dividing a whole string into chunks based on given argument.
-console.log(x);
+// let x = gameName.split(' ') //split retuns an array. dividing a whole string into chunks based on given argument.
+// console.log(x);

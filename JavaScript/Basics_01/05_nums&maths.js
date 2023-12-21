@@ -16,7 +16,7 @@ const hundreds = 100000000;
 console.log(hundreds.toLocaleString('en-US')); // converts to a string with commas for lagre numbers. argument takes how to show the value
 console.log(hundreds.toLocaleString('en-IN')); // converts to a string with commas for lagre numbers. argument takes how to show the value
 
-/************************************ maths *********************************/
+/******************************** maths *********************************/
 
 // console.log(Math);
 

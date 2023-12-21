@@ -17,16 +17,18 @@ const another_array = [1, 2, 3, [4, 5, 6], 7, [6, 7, [4, 5]]];
 
 const real_another_array = another_array.flat(Infinity);
 console.log(real_another_array);
+// flat() method is used to flatten the array, i.e. it removes the nested arrays and returns a single array.
 
-console.log(Array.isArray("Hitesh"));
-console.log(Array.from("Hitesh")); // converts to an Array
-console.log(Array.from({
-    name: "hitesh",
-  })
-); // as we're not specifying what to convert from, i.e. convert keys to array or convert key values to array it returns a empty string.
+// console.log(Array.isArray("Hitesh"));
+// console.log(Array.from("Hitesh")); // converts to an Array
+// console.log(Array.from({
+//     name: "hitesh",
+//   })
+// ); 
+// as we're not specifying what to convert from, i.e. convert keys to array or convert key values to array it returns a empty string.
 
 let score1 = 100;
 let score2 = 200;
 let score3 = 300;
 
-console.log(Array.of(score1, score2, score3)); // makes array using values
+// console.log(Array.of(score1, score2, score3)); // makes array using values
