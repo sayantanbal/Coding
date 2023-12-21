@@ -15,7 +15,7 @@ const all_new_heros = [...marvel_heros, ...dc_heros]; // ... is spread operator
 
 const another_array = [1, 2, 3, [4, 5, 6], 7, [6, 7, [4, 5]]];
 
-const real_another_array = another_array.flat(Infinity);
+const real_another_array = another_array.flat(Infinity); // Infinity is used to flatten the array to any level
 console.log(real_another_array);
 // flat() method is used to flatten the array, i.e. it removes the nested arrays and returns a single array.
 

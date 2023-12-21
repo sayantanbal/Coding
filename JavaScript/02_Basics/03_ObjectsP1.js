@@ -26,7 +26,8 @@ const JsUser = {
 // console.log(JsUser["email"])
 // console.log(JsUser["full name"]) // we can't use more than one word variable with '.'; so we have to use [] to access it.
 // so JsUser.full name will give error. but JsUser["full name"] will work.
-// console.log(JsUser[mySym])
+// console.log(JsUser[mySym]) // we can't access it using '.'. we have to use [] to access it. because it is a symbol.
+// console.log(typeof JsUser[mySym])
 
 JsUser.email = "abc@chatgpt.com"
 // Object.freeze(JsUser)

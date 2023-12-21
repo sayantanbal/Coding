@@ -71,11 +71,12 @@ const course = {
     courseInstructor: "sayantan"
 }
 
-// course.courseInstructor
-
+const {courseInstructor} = course // this is called de-structuring.
+console.log(typeof courseInstructor); // this will give the value of courseInstructor key.
+ 
 const {courseInstructor: instructor} = course // :instructor is a way to call the key "courseInstructor" as "instructor". this is called de-structuring.
 
-// console.log(courseInstructor);
+console.log(courseInstructor);
 console.log(instructor);
 
 // {
