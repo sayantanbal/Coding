@@ -3,13 +3,13 @@ const form = document.querySelector('form');
 // const height = parseInt(document.querySelector('#height').value)
 
 form.addEventListener('submit', function (e) {
-  e.preventDefault();
+  e.preventDefault(); // this will prevent the default behaviour of the form which is to refresh the page
 
   const height = parseInt(document.querySelector('#height').value);
   const weight = parseInt(document.querySelector('#weight').value);
   const results = document.querySelector('#results');
 
-  if (height === '' || height < 0 || isNaN(height)) {
+  if (height === '' || height < 0 || isNaN(height)) { // isNaN is used to check if the value is a number or not. it is the recommended way to check if the value is a number or not.
     results.innerHTML = `Please give a valid height ${height}`;
   } else if (weight === '' || weight < 0 || isNaN(weight)) {
     results.innerHTML = `Please give a valid weight ${weight}`;

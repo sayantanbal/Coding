@@ -4,8 +4,13 @@
 // console.log(typeof(x));
 // console.log(typeof(false));
 
-const a = <div> {age} </div>;
-const b = <div> {age} </div>;
+// const a = <div> {age} </div>;
+// const b = <div> {age} </div>;
 
 
-console.log(typeof (a), typeof(b));
+// console.log(typeof (a), typeof(b));
+
+
+
+console.log(parseInt('44aa')); //44 is given beacuse it is a valid number but aa is not a valid number so it will stop there.
+console.log(parseInt('44a4a')); //44 is given beacuse it is a valid number but aa is not a valid number so it will stop there.
