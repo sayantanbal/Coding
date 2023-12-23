@@ -52,7 +52,28 @@ function addone(num){
 
 
 
-addTwo(5) // as 
+addTwo(5) 
 const addTwo = function(num){
     return num + 2
 }
+
+
+/*
+    hoisting is a process where the javascript engine moves all the function declaration to the top of the file.
+    `addone` is a function declaration and `addTwo` is a function expression.
+    So, we can see that the function declaration is hoisted but the function expression is not hoisted.
+    That's why we can call the function declaration before it is declared but we can't call the function expression before it is declared.
+
+
+    function declaration:
+    function addone(num){
+        return num + 1
+    }
+
+    function expression:
+    const addTwo = function(num){
+        return num + 2
+    }
+
+    function expression is holding a function in a variable.
+*/
