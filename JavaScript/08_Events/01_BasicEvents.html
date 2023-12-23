@@ -9,6 +9,7 @@
     <h2>Amazing image</h2>
     <div >
         <ul id="images">
+            <!-- we can add onclick event to each image but it is not recommended -->
             <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
             <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
             <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
@@ -25,13 +26,19 @@
 
     // document.getElementById('owl').onclick is old way of doing it that is not recommended nowadays. cause it misses other eventsrather than 'click'
 
-     // attachEvent()
+     // attachEvent() ---> not used anymore. it is for IE8 and older
     // jQuery - on
 
     // type, timestamp, defaultPrevented
     // target, toElement, srcElement, currentTarget,
     // clientX, clientY, screenX, screenY
     // altkey, ctrlkey, shiftkey, keyCode
+
+
+    // addEventListener(type, listener, useCapture) is the basic syntax. useCapture is optional. if it is true, the event handler is executed in the capturing phase. if it is false, the event handler is executed in the bubbling phase. default is false. listener is the function to be executed when the event is fired. type is the event type.
+
+    // addEventListener() holds many event types. click, mouseover, mouseout, mousemove, mousedown, mouseup, keydown, keyup, keypress, focus, blur, change, submit, resize, scroll, load, unload, error, abort, contextmenu, dblclick, drag, dragend, dragenter, dragleave, dragover, dragstart, drop, etc.
+    // addEventListener() holds a list of event handlers for each element. if we add more than one event handler to the same element, they will be executed in the order they were added.
 
     // document.getElementById('images').addEventListener('click', function(e){
     //     console.log("clicked inside the ul");
@@ -43,17 +50,23 @@
     // }, false)
     
     // document.getElementById('google').addEventListener('click',function(e){
-    //     e.preventDefault();
-    //     e.stopPropagation()
+    //     e.preventDefault(); // it stops the default action of the element. here it stops the link to go to google.com there is another func named defaultPrevented. it is a boolean value. it is true if the preventDefault() method was called for the event, otherwise it is false.
+    //     e.stopPropagation() // it stops the bubbling/capture effect
     //     console.log("google clicked");
     // }, false)
-   
+
     
+    //useCapture is by default false. It creates "bubble effect". bubble effect is when we click on the child element, the parent element is also clicked. but 1st child element is clicked then parent element is clicked. 
+    //but if 
+    // we set useCapture to true, it creates "capture effect". capture effect is when we click on the child element, the parent element is also clicked. but 1st parent element is clicked then child element is clicked.    
+
+
+
     document.querySelector('#images').addEventListener('click', function(e){
         console.log(e.target.tagName);
         if (e.target.tagName === 'IMG') {
             console.log(e.target.id);
-            let removeIt = e.target.parentNode
+            let removeIt = e.target.parentNode  // parentNode is the parent of the element. here parentNode is the li element
             removeIt.remove()
         }
     
