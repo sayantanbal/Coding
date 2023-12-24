@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const sayDate = function(str){
+        console.log(str, Date.now());
+    }
+
+    const intervalId = setInterval(sayDate, 1000, "hi") 
+    /** 
+     * setInterval() is used to call a function or evaluate an expression at specified intervals. it returns an integer value which can be used to cancel the interval. it is used to schedule a task to be performed "repeatedly". it is used to set a timer which executes a function or specified piece of code repeatedly at specified time intervals.
+     * setInterval() holds 3 parameters. 1st is the function to be executed. 2nd is the number of milliseconds to wait before executing the code. 3rd is the argument to be passed to the function.
+     * 1st function is actually a handler.
+     * 2nd parameter is the number of milliseconds to wait before executing the code. it is an integer value. it is the time interval between each execution of the function. if it is not specified, the value 0 is used.
+     * 3rd parameter is the argument to be passed to the function. it is the argument that is printed in the console.
+     * 3rd param is actually optional. if we don't pass it, it will not be printed in the console. instead passing it as a param we can pass it in the main function as well. 
+    */
+
+    clearInterval(intervalId)
+</script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const sayHitesh = function(){
+        console.log("Hitesh");
+    }
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "best JS series"
+    }
+
+    const changeMe = setTimeout(changeText, 2000) // setTimeout() is a method that calls a function or evaluates an expression after a specified number of milliseconds. it returns an integer value which can be used to cancel the timeout. it is used to schedule a task to be performed once. it is used to delay the execution of some code. it is used to set a timer which executes a function or specified piece of code once the timer expires. 
+    // setTimeout() holds 2 parameters. 1st is the function to be executed. 2nd is the number of milliseconds to wait before executing the code.
+    // 1st function is actually a handler.
+    // handler is a function that is executed when something happens. like when a user clicks on a button, the handler function is executed.
+    // in settimeout handler is is given as reference. it is not executed immediately. 
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(changeMe)
+        console.log("STOPPED")
+    })
+
+    // clearTimeout() is used to cancel a timeout previously established by calling setTimeout(). it returns undefined. it is used to cancel the scheduled timeout.
+    // clearTimeout() holds 1 parameter. it is the integer value returned by setTimeout().
+    // so we need to store the value returned by setTimeout() in a variable and pass that variable to clearTimeout() to cancel the timeout.
+</script>
+</html>
