@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;">
+    0	UNSENT	Client has been created. open() not called yet.
+    1	OPENED	open() has been called.
+    2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+    3	LOADING	Downloading; responseText holds partial data.
+    4	DONE	The operation is complete.
+</body>
+<script>
+    const requestUrl = 'https://api.github.com/users/sayantanbal'
+    const xhr = new XMLHttpRequest(); // XMLHttpRequest is a constructor function. It is used to create an object. it does not have any properties or methods. It is used to make a request to the server.
+    xhr.open('GET', requestUrl) // open() is a method of XMLHttpRequest. It is used to open a request. It takes two parameters. 1. method 2. url
+    xhr.onreadystatechange = function(){  
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4) {
+            const data = JSON.parse(this.responseText) // data mostly comes as string. We need to convert it to JSON to use it as object. JSON has a parse property to convert the whole data into JSON
+            console.log(typeof data); // returns "object"
+            console.log(data.followers);
+        }
+    }
+    xhr.send(); // send() is a method of XMLHttpRequest. It is used to send the request to the server. open() must be called before send(). open just creates the request send() does the rest.
+
+
+
+    // console is not a JS inbuilt function. it is provided by a engine. such as V8 engine. it allocates a special space that is dev tools >> console.
+</script>
+</html>
