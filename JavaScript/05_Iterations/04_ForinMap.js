@@ -1,3 +1,13 @@
+
+
+
+/* 
+    for-of loop is used for iterable objects as arrays and maps.
+    for-in loop is used for objects.
+*/
+
+
+
 const myObject = {
     js: 'javascript',
     cpp: 'C++',
@@ -6,7 +16,7 @@ const myObject = {
 }
 
 for (const key in myObject) {
-    //console.log(`${key} shortcut is for ${myObject[key]}`);
+    console.log(`${key} shortcut is for ${myObject[key]}`);
 }
 
 

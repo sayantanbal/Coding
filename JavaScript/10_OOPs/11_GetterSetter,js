@@ -1,0 +1,38 @@
+class User {
+    constructor(email, password){
+        this.email = email;
+        this.password = password
+    }
+
+
+/*  
+    joto property define kora achhe sob kota r jonno by default getters and setters set hoye thake. we can change that using "get" and "set" keyword.
+
+    getters mne hochhe jokhon amra kono property er value access korbo tokhon amra jodi kono extra operation kichu korte chai tokhon amra getter use korbo. getters er nam er pore () dite hobe na, dile error dekhabe. normally ekhane value return kora hoye thake.
+
+    setters mne hochhe jokhon amra kono property er value set korbo tokhon amra jodi kono extra operation kichu korte chai tokhon amra setter use korbo. setters er nam er pore () dite hobe na, dile error dekhabe. ekhane amra value set korte chai, tai value er pore = sign er pore value diyi. normally ekhane value set kora hoye thake.
+
+
+
+    jodi getter ba setter er modhhe kono ekta baniye diyi then arektao set korte hobe.
+*/
+    get email(){
+            // _email makes the seperation of calling this.email and this._email. else this.email will call the getter again and again and it will be an infinite loop. and eventually call stack will overflow. constructor and getter both will race to set the value of email. so we have to make a seperation between them. we can do that by using _email. it is a convention to use _ before the name of the property that we are using in getter and setter.
+        return this._email.toUpperCase()  // it is a type of private property. 
+    }
+    set email(value){
+        // without _ constructor and setter both will race to set the value of email. so we have to make a seperation between them. we can do that by using _email. it is a convention to use _ before the name of the property that we are using in getter and setter.
+        this._email = value
+    }
+
+    get password(){
+        return `${this._password}sayantan`
+    }
+
+    set password(value){
+        this._password = value
+    }
+}
+
+const sayantan = new User("s@sayantan.ai", "abc")
+console.log(sayantan.email);
