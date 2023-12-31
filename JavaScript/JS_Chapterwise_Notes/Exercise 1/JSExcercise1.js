@@ -8,10 +8,11 @@ console.log(radomNum);
 
 let maxTry = 10;
 
-while (maxTry != 0) {
-  let userInput =  prompt(`Guess a number between 1 to 100 : `);
+while (maxTry !== 0) {
+  let userInput =  Number(prompt(`Guess a number between 1 to 100 : `));
   if (userInput === radomNum) {
     console.log("You have won");
+    break;
   } else if (userInput > radomNum) {
     console.log("You have entered a greater number");
   } else {
@@ -20,3 +21,6 @@ while (maxTry != 0) {
   maxTry--;
   console.log(`Remaining Try - ${maxTry}`);
 }
+if (maxTry === 0)
+console.log(`You have lost the game. The number was ${radomNum}`);
+console.log(`Your score is ${maxTry} .`);
