@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure aur chai</title>
+</head>
+<body style="background-color: #313131;">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+
+    <script>
+
+    // when a func is defined inside another func then the inner func has access to all the variables of outer func. this is called lexaical scoping.
+
+    // higher order func is a func that accepts another func as an argument or returns another func as a return value or both.
+
+    // function init() {
+    //     let name = "Mozilla"; 
+    //     function displayName() {
+    //         console.log(name); 
+    //     }
+    //     displayName();
+    // }
+    // init();
+
+    // function outer(){
+    //     let username = "hitesh"
+    //     console.log("OUTER", secret);
+    //     function inner(){
+    //         let secret = "my123"
+    //         console.log("inner", username);
+    //     }
+    //     function innerTwo(){
+    //         console.log("innerTwo", username);
+    //         console.log(secret);
+    //     }
+    //     inner()
+    //     innerTwo()
+    // }
+    // outer()
+    // console.log("TOO OUTER", username);
+
+
+    // function makeFunc() {
+    //     const name = "Mozilla";
+    //     function displayName() {
+    //         console.log(name);
+    //     }
+    //     return displayName; // when displayname is returned it still has access to the variable name through lexical scoping. and now as it has been returned it gets all the scope of the outer func. whole memory is shared not on;y executional context.
+    // }
+
+    // const myFunc = makeFunc();
+    // myFunc();
+
+    </script>
+
+
+
+
+    <script>
+
+    // CLOSURE
+    // closure is a combination of a function and the lexical environment within which that function was declared. this environment consists of any local variables that were in scope at the time the closure was created.
+
+    
+        // document.getElementById("orange").onclick = function(){
+        //     document.body.style.backgroundColor = `orange`
+        // }
+        // document.getElementById("green").onclick = function(){
+        //     document.body.style.backgroundColor = `green`
+        // }
+
+        function clickHandler(color){
+            // document.body.style.backgroundColor = `${color}`// if you do this then it will change the color of the body as soon as the page loads. because * but we want it to change only when we click the button. so we will return a function from here and then we will call it when we click the button.
+
+            return function(){
+                document.body.style.backgroundColor = `${color}`
+            }
+        }
+
+        document.getElementById('orange').onclick = clickHandler("orange") // *we were expecting to return a function but we executed the func. so its shwows the color as soon as the page loads.
+        document.getElementById('green').onclick = clickHandler("green")
+
+    </script>
+</html>
