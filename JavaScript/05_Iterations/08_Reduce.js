@@ -20,6 +20,18 @@ Steps for reduce func -
 Note - 
     1. it is not necessary to specify the val1 value. if not specified initialises as 0.
     2.  If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
+    3. If initialValue is not specified, the first element in the array is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
+    ex. - 
+    let obj ={
+        a: 1,
+        b: 2,
+        c: 3
+    }
+    
+    console.log(obj+3);
+    
+    4. If the array is empty and no initialValue is provided, TypeError will be thrown.
+    5. If the array has only one element (regardless of position) and no initialValue is provided, or if initialValue is provided but the array is empty, the solo value will be returned without calling callbackfn.
 
 */
 const myTotal = myNums.reduce( (acc, curr) => acc+curr)
@@ -46,6 +58,7 @@ const shoppingCart = [
     },
 ]
 
-const priceToPay = shoppingCart.reduce((acc, item) => acc + item.price, 0)
+const priceToPay = shoppingCart.reduce((acc, item) => acc + item.price)
 
 console.log(priceToPay);
+
