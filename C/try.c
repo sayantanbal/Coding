@@ -79,6 +79,7 @@
 
 // }
 
+<<<<<<< HEAD
 // #include <stdio.h>
 // void main()
 // {
@@ -191,4 +192,29 @@ void main()
         reversedNumber = reversedNumber / 10;
     }
     printf("Reversed Number = %d", reversedNumber2);
+=======
+#include <stdio.h>
+int main()
+{
+    int number;
+    printf("Enter the Number -> ");
+    scanf("%d", &number);
+    for (;;)
+    {
+        if (number % 2 == 0)
+        {
+        }
+        else
+        {
+            break;
+        }
+        number = (number / 2);
+        if (number == 2)
+        {
+            printf("The given number is power of 2 ");
+            break;
+        }
+    }
+    return 0;
+>>>>>>> 988b3c7 (Add code for various number manipulation tasks)
 }
