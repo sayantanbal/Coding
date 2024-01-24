@@ -114,7 +114,7 @@ int main()
 }
 
 // display all the numbers from 2 to 100 which are not divisible by 2 as well as 3
-// 5, 7, 11, 13, 17, 19, 23, 25, 29, 31, 35, 37, 41, 43, 47, 49, 53, 55, 59, 61, 65, 67, 71, 73, 77, 79, 83, 85, 89, 91, 95, 97
+// 5, 7, 9, 11, 13, 17, 19, 23, 25, 29, 31, 35, 37, 41, 43, 47, 49, 53, 55, 59, 61, 65, 67, 71, 73, 77, 79, 83, 85, 89, 91, 95, 97
 
 #include<stdio.h>
 int main()
@@ -195,7 +195,7 @@ int main()
 
 
 // find all the perfect numbers that are more than 1 digit and less than 5 digit
-// 6, 28, 496, 8128
+// 28, 496, 8128
 
 #include<stdio.h>
 int main()
