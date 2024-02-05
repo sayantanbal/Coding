@@ -1,20 +1,18 @@
 # if __name__ == '__main__':
 #     n = int(input())
-    
+
 #     student_marks = {}
 #     for _ in range(n):
 #         name, *line = input().split()
 #         scores = list(map(float, line))
 #         student_marks[name] = scores
 #     # query_name = input()
-    
+
 #     # result = sum(student_marks[query_name])/len(student_marks[query_name])
 
 
 #     # formatted_result = '{:.2f}'.format(result)
 #     # print(formatted_result)
-
-
 
 
 # from pytube import Playlist
@@ -28,6 +26,12 @@
 
 
 # # from pytube import YouTube
+# x = 3
 
+# print(type(x))
+x = 10
+y = 10
+print(x, y)
 
-
+x = 11
+print(x, y)

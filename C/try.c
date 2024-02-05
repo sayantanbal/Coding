@@ -219,10 +219,28 @@
 // >>>>>>> 988b3c7 (Add code for various number manipulation tasks)
 // }
 
-#include <stdio.h>
-int main()
-{
-    int number;
-    printf("%d", sizeof(int));
-    return 0;
-}
+// #include <stdio.h>
+// #include <math.h>
+// int main()
+// {
+//     // int number;
+//     // printf("%d", sizeof(int));
+//     // return 0;
+//     int x = pow(5, 3);
+//     printf("%f", pow(5, 3));
+// }
+
+// #include <stdio.h>
+// void main(){
+//     int x = 10;
+//     int y = x;
+//     printf("%d ", x);
+//     printf("%d ", y);
+
+//     x = 11;
+//     printf("%d ", x);
+//     printf("%d ", y);
+// }
+
+
+
