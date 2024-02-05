@@ -244,3 +244,12 @@
 
 
 
+// #include<stdio.h>
+// void main(){
+//     int x = 2, y = 3, z = 4;
+//     if (z>y>x)
+//         printf("jahj");
+//     else
+//         printf("888");
+    
+// }

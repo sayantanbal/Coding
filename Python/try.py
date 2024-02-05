@@ -29,9 +29,25 @@
 # x = 3
 
 # print(type(x))
-x = 10
-y = 10
-print(x, y)
+# x = 10
+# y = 10
+# print(x, y)
 
-x = 11
-print(x, y)
+# x = 11
+# print(x, y)
+# import copy
+
+# l1 = [1,2,3, [10,12, [199,299]]]
+# l2 = l1[:]
+# l3 = copy.copy(l1)
+# # print(l2, l3)
+
+# l2[0] = 14
+# repr(l2)
+
+
+x = 2
+y = 3
+z = 4
+
+print(z > y > x)
