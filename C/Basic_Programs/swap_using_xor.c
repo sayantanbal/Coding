@@ -1,5 +1,4 @@
 #include<stdio.h>
-
 void main()
 {
     int a, b;
@@ -11,6 +10,6 @@ void main()
     b=a^b;
     a=a^b;
     printf("After swapping the variables :\n");
-    printf("The fist varriable is=%d\n", a);
-    printf("The second varriable is=%d\n", b);
+    printf("The fist varriable is = %d\n", a);
+    printf("The second varriable is = %d\n", b);
 }

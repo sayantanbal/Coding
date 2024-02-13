@@ -1,13 +1,13 @@
-#include<stdio.h>
-#include<conio.h>
+#include <stdio.h>
+#include <conio.h>
 int main()
 {
-	int a,b,h;
+	int a, b, h;
 	printf("Enter the value of base::");
-	scanf("%d",&b);
+	scanf("%d", &b);
 	printf("Enter the value of height::");
-	scanf("%d",&h);
-	a=(0.5)*(b*h);
-	printf("The Area of the Triangle is=%d",a);
+	scanf("%d", &h);
+	a = (0.5) * (b * h);
+	printf("The Area of the Triangle is=%d", a);
 	return 0;
 }
