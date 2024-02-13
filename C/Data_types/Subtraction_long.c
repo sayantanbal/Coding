@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include <stdio.h>
 
 int main()
 {
@@ -7,5 +7,5 @@ int main()
     long sub;
     sub = a - b;
     printf("The subtraction of two long integer is %li", sub);
-return 0;
+    return 0;
 }
