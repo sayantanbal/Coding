@@ -1,5 +1,3 @@
-
-
 # python can handel large numbers. it can handle the numbers of any length. specifically python3 has no limit for the length of the number. python2 had the limit of 32 bit. but python3 has no limit.
 
 
@@ -132,16 +130,48 @@
     # & -> bitwise and
     # | -> bitwise or
     # ^ -> bitwise xor
-    # ~ -> bitwise not
+    # ~ -> bitwise not (*)
     # << -> bitwise left shift
     # >> -> bitwise right shift
     # example:
     # print(10 & 7) # 2
     # print(10 | 7) # 15
     # print(10 ^ 7) # 13
-    # print(~10) # 5
+    # print(~10) # -11
     # print(10 << 2) # 40
     # print(10 >> 2) # 2
+
+    # (*) bitwise not works as folows:  
+    # ~x = -(x+1)
+    # example:
+    # print(~10) # -11
+    # print(~-10) # 9
+
+    # in details -> 
+#     a = 10 = 1010 (Binary)
+
+# In computers we usually represent numbers using 32 bits,
+# so binary representation of 10 is (....0000 1010)[32 bits]
+
+# ~a is basically 1's complement of a 
+# i.e ~a should be ~10 = ~(....0000 1010) = (....1111 0101) = intermediate-result
+
+# Since bitwise negation inverts the sign bit,
+# we now have a negative number. And we represent a negative number
+# using 2's complement.
+
+# 2's complement of intermediate-result is:
+# intermediate-res =  0101      //....1111 0101
+      
+#                      1010      //....0000 1010 -(1's complement)
+#                          +1    
+#                  -----------
+#                    =  1011      //....0000 1011
+#                   -----------
+#                    =   -11 (Decimal)
+                   
+# thus ~a = -11
+
 
 
 
