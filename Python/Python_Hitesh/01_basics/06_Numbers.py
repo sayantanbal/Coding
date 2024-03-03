@@ -321,7 +321,7 @@ print(a == b, a , b) # False 3.3000000000000003 3.3.
 # print(set1 != set2) # True
 # print(set1.isdisjoint(set2)) # False
 
-# if a set is substracted from another set, then the elements of the first set which are not in the second set are returned. if the values are same in both the sets, then the empty set is returned. 
+# if a set is subtracted from another set, then the elements of the first set which are not in the second set are returned. if the values are same in both the sets, then the empty set is returned. 
 # example:
 # set1 = {1, 2, 3, 4, 5}
 # set2 = {1, 2, 3, 4, 5}
