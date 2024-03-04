@@ -6,6 +6,7 @@
 # double quotes : "hello"
 # triple quotes : '''hello''' or """hello"""
 # raw strings : r'hello' or r"hello"
+# raw strings are used to ignore escape sequences
 
 # all formatting is save in the string
 
@@ -87,7 +88,7 @@
 
 # strings in python are unicode (UTF-8) by default. but it supports other unicode versions as well.
 
-# strings in python has many methods, some of them are :
+# strings in python has many built in methods, some of them are :
 
     # capitalize() : returns a copy of the string with only its first character capitalized.
     # casefold() : returns a casefolded copy of the string.
@@ -147,3 +148,54 @@
     # string.punctuation : contains all punctuation characters
     # string.printable : contains all printable characters
     # string.whitespace : contains all whitespace characters
+
+
+# strings in python has many formatting codes, some of them are :
+
+    # %c : character
+    # %s : string
+    # %d : decimal
+    # %i : integer
+    # %o : octal
+    # %x : hexadecimal
+    # %e : exponential
+    # %f : float
+    # %g : general
+    # %r : raw
+    # %a : ascii
+    # %n : newline
+    # %t : tab
+    # %b : binary
+    # %u : unicode
+    # %p : pointer
+    # %m : memory address
+    # %l : long
+    # %h : short
+   
+# strings in python has many escape sequences, some of them are :
+    # \ : backslash
+    # \' : single quote
+    # \" : double quote
+    # \n : newline
+    # \t : tab
+    # \b : backspace
+    # \r : carriage return
+    # \f : formfeed
+    # \v : vertical tab
+    # \a : bell
+    # \0 : null
+    # \xhh : hexadecimal
+
+# strings in python can be converted to other types using built in functions, some of them are : 
+    # 1. string -> list : list(string) or use split method
+        # example :
+            # string = "hello"
+            # list(string) = ['h', 'e', 'l', 'l', 'o']
+            # string.split() = ['hello']
+    # 2. string -> tuple : tuple(string) or use split method
+    # 3. string -> set : set(string) or use split method
+    # 4. string -> dictionary : use split method
+# length of string can be found using len function.
+# example :
+    # string = "hello"
+    # len(string) = 5
