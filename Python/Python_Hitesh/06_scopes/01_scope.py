@@ -31,7 +31,7 @@ def f1():
         print(x)
     return f2
 myResult = f1()
-myResult()
+myResult() # it is an example of closure. It is a function that remembers the values in the enclosing scope even if they are not present in the memory. so when the function is called, it will automatically get the value of x in the enclosing scope.
 
 
 def chaicoder(num):
