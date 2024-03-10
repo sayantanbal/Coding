@@ -7,7 +7,7 @@ def timer(func):
         end = time.time()
         print(f"{func.__name__} ran in {end-start} time")
         return result
-    return wrapper
+    return wrapper # this return is for the decorator
 
 
 @timer
