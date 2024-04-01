@@ -1,8 +1,8 @@
 from pymongo import MongoClient
-from bson import ObjectId
+from bson import ObjectId # in mongodb, id is stored as ObjectId in bson format
 
 client = MongoClient("mongodb+srv://CHAI:CHAI@cluster0.lxl3fsq.mongodb.net/", tlsAllowInvalidCertificates=True)
-# Not a good idea to include id and password in code files
+# Not a good idea to include id and password in code files. you should use environment variables or ".env"file
 #  tlsAllowInvalidCertificates=True - Not a good way to handle ssl
 
 print(client)
@@ -22,7 +22,7 @@ def update_video(video_id, new_name, new_time):
     video_collection.update_one({'_id': ObjectId(video_id)}, {"$set": {"name": new_name, "time": new_time}})
 
 def delete_video(video_id):
-    video_collection.delete_one({"_id": video_id})
+    video_collection.delete_one({"_id": ObjectId(video_id)})
     # TODO: debug this video_id problem
 
 

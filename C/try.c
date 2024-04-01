@@ -253,3 +253,37 @@
 //         printf("888");
     
 // }
+
+
+
+// check if a given input is a number or not without if else or switch case
+
+// #include <stdio.h>
+// void main()
+// {
+//     char x;
+//     printf("Enter a character -> ");
+//     scanf("%c", &x);
+//     (x >=48 && x<=57) ? printf("Given input is a number") : printf("fuck you");
+// }
+
+
+#include <stdio.h>
+#include <stdbool.h>
+
+int main() {
+    char input;
+    printf("Enter a character: ");
+    scanf("%c", &input);
+
+    // Convert the character to its ASCII value
+    int asciiValue = input;
+
+    // Check if it's a number (0-9) using bitwise operations
+    bool isNumber = ((asciiValue >= '0') & (asciiValue <= '9'));
+
+    // Display the result
+    printf("Character is a number (0-9): %d\n", isNumber);
+
+    return 0;
+}
