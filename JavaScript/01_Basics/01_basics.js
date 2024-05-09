@@ -9,17 +9,13 @@
 let name = "Sayantan"
 let number = 10
 let isLoggedIn = false
-//fafafaf
-
 // number = 2^53
 // bigint 
 // string => "" or ''
 // boolean => true or false
 // null --> is a standalone value! It's a type. It's a special type, an object.
-// undefined =>
-// symbol => unique
-
-
+// undefined => is a type and a value. It's a type of a variable that has not been assigned a value.
+// symbol => unique identifier.
 // object 
 
 
