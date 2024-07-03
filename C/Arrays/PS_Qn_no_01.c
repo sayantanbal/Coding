@@ -19,10 +19,10 @@ ptr = ptr + 2;
 
 if (ptr == &arr[2])
 {
-    printf("These point to the same location in meomry\n");
+    printf("These point to the same location in memory\n");
 }
 else{
-    printf("These do not point to the same loaction in meomry\n");
+    printf("These do not point to the same location in memory\n");
 }
 return 0;
 }

@@ -47,7 +47,7 @@
 // console.log("1"+2+2);
 
 // console.log(true); // gives "true" as a output
-// console.log(+true); // means (+true);converts to a number and gives 1.
+// console.log(+true); // means (+true); '+' operator converts to a number and gives 1.
 // console.log(true+);// isn't a correct syntax
 console.log(+""); // means (+false); converts to a number and gives 0.
 // console.log(+"    "); // means (+true); converts to a number and gives 0.
@@ -56,7 +56,7 @@ console.log(+""); // means (+false); converts to a number and gives 0.
 // let abc = +false;
 // console.log(typeof abc);
 
-// gameCounter = 100; // if you don't specify let var const etc then it's a global variable
+// gameCounter = 100; // if you don't specify 'let', 'var', 'const' etc. then it's a global variable
 
 // gameCounter++;
 // console.log(gameCounter);
@@ -68,9 +68,9 @@ console.log(+""); // means (+false); converts to a number and gives 0.
 // console.log(--gameCounter);
 // console.log(gameCounter--);
 
-
-// // console.log(++gameCounter--);
-// console.log(--gameCounter++); both are wrong syntax.
+// both are wrong syntax. ->
+// console.log(++gameCounter--);
+// console.log(--gameCounter++); 
 
 
 

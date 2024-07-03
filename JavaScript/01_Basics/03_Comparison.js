@@ -7,7 +7,7 @@
 // console.log(2===1);
 
 // console.log('2'>1);
-// console.log("02">1);
+console.log("02">='02');
 // console.log('2'==1);
 // console.log("2"===1);
 
@@ -22,12 +22,12 @@ the reason is that comparison operators and equality checking operators work dif
 
 comparison operators convert null to a number treating it as a 0.
 
-i.e. null > 0 is false casue 0 !> 0.
+i.e. null > 0 is false cause 0 !> 0.
      
 but equality check doesn't work like this.
 
 
-if you take a variable and initialise it with null it works the same. means comparison operators convert null to 0 for that instance only.
+if you take a variable and initialize it with null it works the same. means comparison operators convert null to 0 for that instance only.
 */
 
 
@@ -43,7 +43,7 @@ let x = null;
 
 
 /* this problem doesn't occur with undefined.*/
-/* but if you take a variable and initialise it with undefined it doesn't work the same. means comparison operators convert undefined to NaN for that instance only.*/
+/* but if you take a variable and initialize it with undefined it doesn't work the same. means comparison operators convert undefined to NaN for that instance only.*/
 
 // console.log(undefined >= 0);
 // console.log(undefined == 0);
@@ -54,12 +54,12 @@ let x = null;
 // console.log(x <= 0)
 
 
-/****************************Memory******************************** */
+/* ***************************Memory******************************** */
 
 
 // Stack and Heap
 
-// stack => primitive, heap => non primitive\
+// stack => primitive, heap => non primitive
 
 // let myName = "Sayantan";
 // let anotherName = myName;
@@ -71,7 +71,7 @@ let x = null;
 
 let user1 = {
     email : "abc@gmail.com",
-    upi_ID : "abc@okaxis"
+    upi_ID : "abc@okhdfcbank"
 }
 
 let user2 = user1
