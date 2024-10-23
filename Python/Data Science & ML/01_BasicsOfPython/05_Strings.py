@@ -211,3 +211,29 @@ print(s.strip())  # Output: 'hello'
 # 37. swapcase(): Swaps the case of the string.
 s = "Hello"
 print(s.swapcase)  # Output: 'hELLO'
+
+
+#User function Template for python3
+class Solution:
+    def numberOfSubsequences(self, S, W):
+        ans = 0
+        
+        while True:  # Until no such subsequence exists
+            i, j, flag = 0, 0, 0
+            
+            while i < len(S):
+                if S[i] == W[j]:
+                    j += 1
+                    S = S[:i] + '*' + S[i+1:]  # Mark visited character as '*'
+                    
+                    if j == len(W):
+                        ans += 1
+                        flag = 1  # A subsequence found
+                        break
+                
+                i += 1
+            
+            if flag == 0:  # No subsequence found in this iteration
+                break
+        
+        return ans

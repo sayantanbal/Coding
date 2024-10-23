@@ -65,10 +65,45 @@
 // }
 
 
-#include <stdio.h>
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int x = printf("Hello World\n");
+//     printf("%d\n", x);
+//     return 0;
+// }
+
+
+
+
+
+#include<stdio.h>
 int main(int argc, char const *argv[])
 {
-    int x = printf("Hello World\n");
-    printf("%d\n", x);
+    // string is an array of characters in C.
+
+    // diff ways to init a string.
+    char str1[] = "Hello"; // here we are not specifying the size of the array neither the null char, so the size of the array will be the size of the string + 1 for the null character
+    // but if you want to declare a string with a specific size then you can do it like this
+    char str2[10] = "Hello"; // here the size of the array is 10, but the size of the string is 6, so the remaining 4 will be filled with null characters.
+    printf("%s\n", str2[7]); // this will print null character, all the remaining space will be filled with null characters!
+
+    // another way to declare a string is like this
+    char str3[] = {'H', 'e', 'l', 'l', 'o', '\0'}; // here we are specifying the size of the array and the null character.
+
+
+
+    // char abc[5] = "Hello"; // this will give an error because the size of the array is 5, but the size of the string is 6, so the null character will not fit in the array.
+    char abc[4] = {'a', 'b', 'c', '\0'}; // this will work fine because the size of the array is 6 and the size of the string is 6.
+    printf("1");
+    printf("%s\n", abc[3]);
+
+
+    char str4[10] = "Hello";
+    char s1[10] = str4;
+    printf("%s\n", s1); // you can't assign a string to another string like this, you have to use strcpy() function to copy the string to another string. as "str4" is a pointer to the first element of the array, so you can't assign a pointer to another pointer like this.
+
+
+
     return 0;
 }
