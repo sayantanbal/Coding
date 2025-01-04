@@ -34,19 +34,21 @@
 
 ---
 
-**(ii) Prefix, infix, and postfix expression. Why is postfix notation used?**  
-- **Prefix**: Operator appears before operands, e.g., \(+AB\).  
-- **Infix**: Operator appears between operands, e.g., \(A+B\).  
-- **Postfix**: Operator appears after operands, e.g., \(AB+\).  
+**(ii) Prefix, infix, and postfix expression. Why is postfix notation used?**
 
-- **Why Postfix is Used**:  
-  1. Simplifies expression evaluation as no parentheses are required.  
-  2. Suitable for stack-based evaluation.  
+- **Prefix**: Operator appears before operands, e.g., \(+AB\).
+- **Infix**: Operator appears between operands, e.g., \(A+B\).
+- **Postfix**: Operator appears after operands, e.g., \(AB+\).
+
+- **Why Postfix is Used**:
+  1. Simplifies expression evaluation as no parentheses are required.
+  2. Suitable for stack-based evaluation.
 
 ---
 
 **(iii) Write an algorithm to check if parentheses are valid.**  
-**Algorithm**:  
+**Algorithm**:
+
 ```
 IsValidParentheses(expression):
   Initialize an empty stack.
@@ -66,64 +68,73 @@ IsValidParentheses(expression):
 
 ---
 
-**(iv) Explain the LIFO principle and provide two examples where it is practically useful.**  
-- **LIFO Principle**: The last element added to the stack is the first to be removed.  
-- **Examples**:  
-  1. Undo functionality in text editors.  
-  2. Function call stack in programming.  
+**(iv) Explain the LIFO principle and provide two examples where it is practically useful.**
+
+- **LIFO Principle**: The last element added to the stack is the first to be removed.
+- **Examples**:
+  1. Undo functionality in text editors.
+  2. Function call stack in programming.
 
 ---
 
-**(v) Which data structure would you recommend for implementing an unrestricted FIFO queue? Justify your choice.**  
-- **Recommendation**: Linked list.  
-  - **Justification**: Efficient for dynamic sizing and allows \(O(1)\) insertion and deletion from the front and rear.  
+**(v) Which data structure would you recommend for implementing an unrestricted FIFO queue? Justify your choice.**
+
+- **Recommendation**: Linked list.
+  - **Justification**: Efficient for dynamic sizing and allows \(O(1)\) insertion and deletion from the front and rear.
 
 ---
 
-**(vi) What is a deque (double-ended queue), and how is it different from a standard queue?**  
-- **Deque**: A double-ended queue allows insertion and deletion from both ends.  
-- **Difference**: A standard queue supports operations only at one end (enqueue at rear, dequeue at front).  
+**(vi) What is a deque (double-ended queue), and how is it different from a standard queue?**
+
+- **Deque**: A double-ended queue allows insertion and deletion from both ends.
+- **Difference**: A standard queue supports operations only at one end (enqueue at rear, dequeue at front).
 
 ---
 
-**(vii) Consider adding the elements 51, 50, 55, 53, and 52 to a queue. What would be the sequence of elements removed from the queue?**  
-- **Sequence removed**: 51, 50, 55, 53, 52 (FIFO order).  
+**(vii) Consider adding the elements 51, 50, 55, 53, and 52 to a queue. What would be the sequence of elements removed from the queue?**
+
+- **Sequence removed**: 51, 50, 55, 53, 52 (FIFO order).
 
 ---
 
-**(viii) Define stack overflow and describe a scenario in which it might occur.**  
-- **Stack Overflow**: Happens when the stack exceeds its memory limit.  
-- **Scenario**: Infinite recursion in a function without a proper base case.  
+**(viii) Define stack overflow and describe a scenario in which it might occur.**
+
+- **Stack Overflow**: Happens when the stack exceeds its memory limit.
+- **Scenario**: Infinite recursion in a function without a proper base case.
 
 ---
 
-**(ix) Explain the working of a circular queue and its advantages over a linear queue.**  
-- **Working**: The rear wraps around to the front when it reaches the end, allowing continuous use of all slots.  
-- **Advantages**:  
-  1. Efficient memory utilization.  
-  2. No need for element shifting during operations.  
+**(ix) Explain the working of a circular queue and its advantages over a linear queue.**
+
+- **Working**: The rear wraps around to the front when it reaches the end, allowing continuous use of all slots.
+- **Advantages**:
+  1. Efficient memory utilization.
+  2. No need for element shifting during operations.
 
 ---
 
 **(x) How can a stack be used to evaluate a postfix expression? Provide the steps involved.**  
-**Steps**:  
-1. Traverse the expression.  
-2. Push operands onto the stack.  
-3. For operators, pop the top two operands, perform the operation, and push the result back.  
-4. The final value on the stack is the result.  
+**Steps**:
+
+1. Traverse the expression.
+2. Push operands onto the stack.
+3. For operators, pop the top two operands, perform the operation, and push the result back.
+4. The final value on the stack is the result.
 
 ---
 
 **(xi) Outline a strategy for implementing multiple stacks within a single array. What challenges might arise?**  
 **Strategy**: Divide the array into sections for each stack, with separate top pointers.  
-**Challenges**:  
-1. Inefficient space usage if stacks grow unevenly.  
-2. Overlapping stack boundaries in dynamic sizing.  
+**Challenges**:
+
+1. Inefficient space usage if stacks grow unevenly.
+2. Overlapping stack boundaries in dynamic sizing.
 
 ---
 
 **(xii) Write an algorithm to convert an infix expression into a postfix expression using a stack.**  
-**Algorithm**:  
+**Algorithm**:
+
 ```
 InfixToPostfix(expression):
   Initialize an empty stack and an output list.
@@ -150,83 +161,87 @@ InfixToPostfix(expression):
 
 ---
 
-**(xiii) Discuss the advantages of using circular queues over linear queues. Provide a real-life example where a circular queue is more suitable.**  
-- **Advantages**: Efficient memory usage and avoidance of shifting elements.  
-- **Example**: Printer task scheduling in an operating system.  
+**(xiii) Discuss the advantages of using circular queues over linear queues. Provide a real-life example where a circular queue is more suitable.**
+
+- **Advantages**: Efficient memory usage and avoidance of shifting elements.
+- **Example**: Printer task scheduling in an operating system.
 
 ---
 
-**(xiv) Queue: Definition, Operations of linear queue, circular queue, and double-ended queue with algorithm. Explain why we need a circular queue.**  
-- **Definition**: A queue is a FIFO data structure.  
-- **Linear Queue**: Insert at rear, delete at front.  
-- **Circular Queue**: Rear wraps to front to reuse memory.  
-- **Double-Ended Queue**: Insert and delete from both ends.  
-- **Why Circular Queue?**: Avoids memory wastage and the need for shifting elements.  
+**(xiv) Queue: Definition, Operations of linear queue, circular queue, and double-ended queue with algorithm. Explain why we need a circular queue.**
+
+- **Definition**: A queue is a FIFO data structure.
+- **Linear Queue**: Insert at rear, delete at front.
+- **Circular Queue**: Rear wraps to front to reuse memory.
+- **Double-Ended Queue**: Insert and delete from both ends.
+- **Why Circular Queue?**: Avoids memory wastage and the need for shifting elements.
 
 ---
 
- ### **4. Linked List**
+### **4. Linked List**
 
 **(i) Compare memory allocation in linked lists with that in arrays. Highlight the differences.**
 
-| **Aspect**         | **Linked List**                                      | **Array**                                        |
-|---------------------|-----------------------------------------------------|-------------------------------------------------|
-| **Memory Allocation** | Dynamic, allocated during runtime for each node.   | Static or dynamic, allocated as a contiguous block. |
-| **Size Flexibility** | Can grow or shrink dynamically without resizing.    | Fixed size, or resizing requires reallocation.   |
-| **Access Time**     | Sequential access, \(O(n)\) for random elements.    | Random access, \(O(1)\) for indexed elements.    |
-| **Memory Usage**    | Extra space for pointers in each node.              | Compact, no extra memory for pointers.          |
+| **Aspect**            | **Linked List**                                  | **Array**                                           |
+| --------------------- | ------------------------------------------------ | --------------------------------------------------- |
+| **Memory Allocation** | Dynamic, allocated during runtime for each node. | Static or dynamic, allocated as a contiguous block. |
+| **Size Flexibility**  | Can grow or shrink dynamically without resizing. | Fixed size, or resizing requires reallocation.      |
+| **Access Time**       | Sequential access, \(O(n)\) for random elements. | Random access, \(O(1)\) for indexed elements.       |
+| **Memory Usage**      | Extra space for pointers in each node.           | Compact, no extra memory for pointers.              |
 
 ---
 
 **(ii) What are the advantages of using linked lists over arrays? Provide examples.**
 
-1. **Dynamic Sizing**: No need to know size in advance.  
-   - Example: Implementing dynamic data structures like stacks and queues.  
-2. **Efficient Insertions/Deletions**: No need for shifting elements, \(O(1)\) if the pointer is known.  
-   - Example: Managing real-time tasks in OS scheduling.  
-3. **Memory Utilization**: Does not require contiguous memory.  
+1. **Dynamic Sizing**: No need to know size in advance.
+   - Example: Implementing dynamic data structures like stacks and queues.
+2. **Efficient Insertions/Deletions**: No need for shifting elements, \(O(1)\) if the pointer is known.
+   - Example: Managing real-time tasks in OS scheduling.
+3. **Memory Utilization**: Does not require contiguous memory.
 
 ---
 
 **(iii) Differentiate between singly linked lists and doubly linked lists.**
 
-| **Aspect**            | **Singly Linked List**                      | **Doubly Linked List**                      |
-|------------------------|---------------------------------------------|---------------------------------------------|
-| **Pointers per Node**  | 1 (points to the next node).                | 2 (points to both next and previous nodes). |
-| **Traversal**          | Only forward traversal is possible.         | Supports forward and backward traversal.    |
-| **Memory Usage**       | Requires less memory for pointers.          | Requires more memory for additional pointer.|
-| **Complexity of Operations** | Simpler to implement.                  | More flexible but complex.                  |
+| **Aspect**                   | **Singly Linked List**              | **Doubly Linked List**                       |
+| ---------------------------- | ----------------------------------- | -------------------------------------------- |
+| **Pointers per Node**        | 1 (points to the next node).        | 2 (points to both next and previous nodes).  |
+| **Traversal**                | Only forward traversal is possible. | Supports forward and backward traversal.     |
+| **Memory Usage**             | Requires less memory for pointers.  | Requires more memory for additional pointer. |
+| **Complexity of Operations** | Simpler to implement.               | More flexible but complex.                   |
 
 ---
 
 **(iv) Write a function to reverse a singly linked list. Explain the logic used.**
 
 **Logic**: Reverse the direction of pointers in the list.  
-**Algorithm**:  
-1. Initialize `prev = NULL`, `curr = head`, `next = NULL`.  
-2. While `curr` is not NULL:  
-   - Save the next node: `next = curr->next`.  
-   - Reverse the pointer: `curr->next = prev`.  
-   - Move to the next node: `prev = curr`, `curr = next`.  
-3. Set `head = prev`.  
+**Algorithm**:
+
+1. Initialize `prev = NULL`, `curr = head`, `next = NULL`.
+2. While `curr` is not NULL:
+   - Save the next node: `next = curr->next`.
+   - Reverse the pointer: `curr->next = prev`.
+   - Move to the next node: `prev = curr`, `curr = next`.
+3. Set `head = prev`.
 
 **Example**:  
 Input: \(1 \to 2 \to 3 \to NULL\)  
-Output: \(3 \to 2 \to 1 \to NULL\)  
+Output: \(3 \to 2 \to 1 \to NULL\)
 
 ---
 
 **(v) Define circular linked lists. Mention one practical use case where they are preferred.**
 
-- **Definition**: In a circular linked list, the last node points to the first node, forming a circle.  
-- **Use Case**: Used in round-robin CPU scheduling for continuous task execution.  
+- **Definition**: In a circular linked list, the last node points to the first node, forming a circle.
+- **Use Case**: Used in round-robin CPU scheduling for continuous task execution.
 
 ---
 
 **(vi) Write an algorithm to delete a node from the middle, beginning, and specific position of a singly linked list. Illustrate the steps with an example.**
 
-**Algorithm**:  
-- **Delete at Beginning**:  
+**Algorithm**:
+
+- **Delete at Beginning**:
   ```
   DeleteBeginning(head):
     if head is NULL:
@@ -234,8 +249,8 @@ Output: \(3 \to 2 \to 1 \to NULL\)
     temp = head
     head = head->next
     Free(temp)
-  ```  
-- **Delete at Middle**:  
+  ```
+- **Delete at Middle**:
   ```
   DeleteMiddle(head, position):
     if position == 1:
@@ -243,68 +258,72 @@ Output: \(3 \to 2 \to 1 \to NULL\)
     Traverse to (position-1) node
     Remove the target node and adjust pointers
   ```
-- **Delete at Specific Position**: Same as deleting in the middle but tailored for any position.  
+- **Delete at Specific Position**: Same as deleting in the middle but tailored for any position.
 
-**Example**: \(1 \to 2 \to 3 \to 4\), delete at position 2 → Result: \(1 \to 3 \to 4\).  
+**Example**: \(1 \to 2 \to 3 \to 4\), delete at position 2 → Result: \(1 \to 3 \to 4\).
 
 ---
 
 **(vii) Write an algorithm to insert a node at the middle, beginning, and specific position of a singly linked list. Illustrate the steps with an example.**
 
-**Algorithm**:  
-- **Insert at Beginning**:  
+**Algorithm**:
+
+- **Insert at Beginning**:
   ```
   InsertBeginning(head, value):
     Create newNode
     newNode->next = head
     head = newNode
-  ```  
-- **Insert at Middle**:  
+  ```
+- **Insert at Middle**:
   ```
   InsertMiddle(head, value, position):
     Traverse to (position-1) node
     Create newNode
     newNode->next = current->next
     current->next = newNode
-  ```  
+  ```
 
-**Example**: Insert 5 at position 2 in \(1 \to 3\): Result: \(1 \to 5 \to 3\).  
+**Example**: Insert 5 at position 2 in \(1 \to 3\): Result: \(1 \to 5 \to 3\).
 
 ---
 
 **(viii) Discuss the applications of doubly linked lists. Provide an algorithm to insert a node at the end, beginning, and specific position of a doubly linked list.**
 
-**Applications**:  
-1. Navigating forward and backward in browsers or multimedia players.  
-2. Implementing complex data structures like deque and Fibonacci heap.  
+**Applications**:
 
-**Algorithm (Insert at End)**:  
+1. Navigating forward and backward in browsers or multimedia players.
+2. Implementing complex data structures like deque and Fibonacci heap.
+
+**Algorithm (Insert at End)**:
+
 ```
 InsertEnd(head, value):
   Create newNode
   Traverse to the last node
   last->next = newNode
   newNode->prev = last
-```  
+```
 
 ---
 
 **(ix) Provide an algorithm to delete a node from the end, beginning, and specific position of a doubly linked list.**
 
-**Algorithm (Delete at End)**:  
+**Algorithm (Delete at End)**:
+
 ```
 DeleteEnd(head):
   Traverse to the last node
   Remove links to the last node
   Free the last node
-```  
+```
 
 ---
 
 **(x) Explain the concept of circular linked lists. Write an algorithm to traverse a circular linked list and count its nodes.**
 
-- **Concept**: Circular linked lists form a continuous loop by pointing the last node back to the first node.  
-- **Algorithm (Traverse and Count)**:  
+- **Concept**: Circular linked lists form a continuous loop by pointing the last node back to the first node.
+- **Algorithm (Traverse and Count)**:
   ```
   CountNodes(head):
     if head is NULL:
@@ -313,7 +332,7 @@ DeleteEnd(head):
     Start from head and traverse until you return to head
     Increment count for each node
     Return count
-  ```  
+  ```
 
 ---
 
@@ -324,7 +343,9 @@ Here are the answers to the remaining parts of Section 4 from your document:
 ### (xi) Provide an algorithm “Insert Node” for a singly linked list and doubly linked list of integers to ensure sorted order (ascending and descending). Is it possible to apply BST logic in this sorted linked list? Explain.
 
 **Algorithm for Sorted Insertion**:
+
 1. **Singly Linked List**:
+
    - Create a new node.
    - Traverse the list to find the appropriate position where the value of the node is greater (for ascending) or smaller (for descending).
    - Update the `next` pointer of the new node and the previous node to insert it.
@@ -333,6 +354,7 @@ Here are the answers to the remaining parts of Section 4 from your document:
    - Similar logic as above, but update both `next` and `prev` pointers of adjacent nodes.
 
 **BST Logic in Sorted Linked List**:
+
 - It is not feasible to apply BST logic directly to a sorted linked list because a BST requires random access to nodes for efficient insertion and search, while linked lists only allow sequential access.
 
 ---
@@ -340,7 +362,9 @@ Here are the answers to the remaining parts of Section 4 from your document:
 ### (xii) Provide an algorithm to insert a node at the end, beginning, and specific position of a circular doubly linked list and circular singly linked list.
 
 **Algorithm**:
+
 1. **Circular Singly Linked List**:
+
    - **Insert at Beginning**:
      - Create a new node and set its `next` pointer to the current head.
      - Traverse to the last node and update its `next` pointer to the new node.
@@ -371,7 +395,9 @@ Here are the answers to the remaining parts of Section 4 from your document:
 ### (xiii) Provide an algorithm to delete a node from the end, beginning, and specific position of a circular doubly linked list and circular singly linked list.
 
 **Algorithm**:
+
 1. **Circular Singly Linked List**:
+
    - **Delete from Beginning**:
      - Update the head to `head.next`.
      - Traverse to the last node and update its `next` pointer to the new head.
@@ -398,10 +424,13 @@ Here are the answers to the remaining parts of Section 4 from your document:
 ### (xiv) Provide an algorithm for polynomial representation using a linked list.
 
 **Algorithm**:
+
 1. **Node Structure**:
+
    - Each node contains three fields: coefficient, exponent, and a pointer to the next node.
 
 2. **Steps to Create and Insert**:
+
    - Initialize the head of the list to `NULL`.
    - For each term in the polynomial:
      - Create a new node with the coefficient and exponent.
@@ -425,13 +454,14 @@ The remaining sections of your document (Section 5 onwards) focus on **Trees**, 
 
 ### (i) What is the height of a tree? How does it relate to the levels of the tree? Define internal node, leaf node, path, degree of a node, and degree of a tree. What is an expression tree?
 
-- **Height of a Tree**: 
+- **Height of a Tree**:
   The height of a tree is the number of edges on the longest path from the root to a leaf node. If a tree has only one node, its height is 0.
 
 - **Relation to Levels**:
   Levels are counted from the root (level 0). The height of the tree equals the number of levels minus one.
 
 - **Definitions**:
+
   - **Internal Node**: A node with at least one child.
   - **Leaf Node**: A node with no children.
   - **Path**: A sequence of nodes connected by edges.
@@ -453,6 +483,7 @@ In-order traversal visits nodes in ascending order of their values in a Binary S
 ### (iii) How can the in-order successor of a node in a binary search tree be determined?
 
 **Steps**:
+
 1. If the node has a right child:
    - The in-order successor is the leftmost node in the right subtree.
 2. If the node has no right child:
@@ -463,6 +494,7 @@ In-order traversal visits nodes in ascending order of their values in a Binary S
 ### (iv) What challenges are associated with recursive implementations of BST traversals?
 
 **Challenges**:
+
 1. **Stack Overflow**: Large trees can cause stack overflow due to deep recursion.
 2. **Memory Overhead**: Each recursive call uses additional memory for the call stack.
 3. **Debugging Complexity**: Recursive functions are harder to debug compared to iterative implementations.
@@ -482,6 +514,7 @@ AVL trees ensure balanced height, leading to O(log n) time complexity for search
 ### (vi) Provide the steps for performing a left rotation in an AVL tree.
 
 **Steps**:
+
 1. Let the unbalanced node be `x` and its right child be `y`.
 2. Assign `y.left` to `x.right`.
 3. Set `x` as the left child of `y`.
@@ -496,6 +529,7 @@ AVL trees ensure balanced height, leading to O(log n) time complexity for search
 Rebalancing is required when the balance factor of any node becomes greater than 1 or less than -1 after insertion or deletion.
 
 **Conditions**:
+
 1. Left-heavy (balance factor > 1): Perform rotations based on the left child.
 2. Right-heavy (balance factor < -1): Perform rotations based on the right child.
 
@@ -508,11 +542,13 @@ Here are the answers to the remaining questions in **Section 5: Tree**:
 ### (viii) How do AVL trees maintain balance and ensure efficient operations?
 
 **Balance Maintenance**:
+
 - AVL trees maintain a balance factor (difference in heights of left and right subtrees) for every node.
 - After every insertion or deletion, the balance factor is checked.
 - If the balance factor exceeds 1 or -1, rotations (single or double) are performed to restore balance.
 
 **Efficiency**:
+
 - By keeping the tree balanced, AVL trees ensure that the height of the tree remains \(O(\log n)\), which guarantees efficient operations for search, insertion, and deletion.
 
 ---
@@ -520,13 +556,17 @@ Here are the answers to the remaining questions in **Section 5: Tree**:
 ### (ix) List and explain the types of rotations used to restore balance in an AVL tree.
 
 **Types of Rotations**:
+
 1. **Left Rotation**:
+
    - Applied when a node becomes right-heavy (balance factor < -1) and the imbalance is caused by the right child’s right subtree.
 
 2. **Right Rotation**:
+
    - Applied when a node becomes left-heavy (balance factor > 1) and the imbalance is caused by the left child’s left subtree.
 
 3. **Left-Right Rotation**:
+
    - Applied when a node becomes left-heavy, but the imbalance is caused by the left child’s right subtree.
    - First, perform a left rotation on the left child, followed by a right rotation on the unbalanced node.
 
@@ -539,12 +579,15 @@ Here are the answers to the remaining questions in **Section 5: Tree**:
 ### (x) Explain the properties of binary search trees (BSTs). Write an algorithm to search, insert, and delete an element in a BST.
 
 **Properties**:
+
 1. The left subtree of a node contains only nodes with keys less than the node’s key.
 2. The right subtree of a node contains only nodes with keys greater than the node’s key.
 3. Both the left and right subtrees must also be binary search trees.
 
 **Algorithms**:
+
 1. **Search**:
+
    ```python
    def searchBST(root, key):
        if root is None or root.key == key:
@@ -556,6 +599,7 @@ Here are the answers to the remaining questions in **Section 5: Tree**:
    ```
 
 2. **Insert**:
+
    ```python
    def insertBST(root, key):
        if root is None:
@@ -592,6 +636,7 @@ Here are the answers to the remaining questions in **Section 5: Tree**:
 ### (xi) Write an algorithm to construct a binary tree from its pre-order and in-order traversals. Explain the process with an example.
 
 **Algorithm**:
+
 1. Identify the root node from the first element of the pre-order traversal.
 2. Locate the root node in the in-order traversal to divide it into left and right subtrees.
 3. Recursively apply the same process for the left and right subtrees.
@@ -601,6 +646,7 @@ Pre-order: [A, B, D, E, C, F]
 In-order: [D, B, E, A, F, C]
 
 **Steps**:
+
 1. Root = A (from pre-order).
 2. Split in-order into left ([D, B, E]) and right ([F, C]).
 3. Recursively build:
@@ -612,15 +658,18 @@ In-order: [D, B, E, A, F, C]
 ### (xii) Discuss the importance of rotations in AVL trees. Explain the steps for performing a left-right rotation.
 
 **Importance of Rotations**:
+
 - Rotations restore the balance of an AVL tree after insertions or deletions that cause imbalance.
 - They ensure the height remains \(O(\log n)\), maintaining efficiency for all operations.
 
 **Steps for Left-Right Rotation**:
+
 1. Perform a **left rotation** on the left child of the unbalanced node.
 2. Perform a **right rotation** on the unbalanced node.
 
 **Example**:
 Before Rotation:
+
 ```
     10
    /
@@ -630,6 +679,7 @@ Before Rotation:
 ```
 
 - Left rotation on 5:
+
 ```
     10
    /
@@ -639,6 +689,7 @@ Before Rotation:
 ```
 
 - Right rotation on 10:
+
 ```
     8
    / \
@@ -647,10 +698,12 @@ Before Rotation:
 
 ---
 
-### (xiii) From the following post-order sequence of a BST, construct the visual representation of the tree.  
+### (xiii) From the following post-order sequence of a BST, construct the visual representation of the tree.
+
 Post-order sequence: [D, E, B, C, A]
 
 **Steps**:
+
 1. The last element in post-order is the root: A.
 2. Split the sequence into left ([D, E, B]) and right ([C]) subtrees.
 3. Recursively build:
@@ -658,6 +711,7 @@ Post-order sequence: [D, E, B, C, A]
    - Right subtree with post-order [C].
 
 **Resulting Tree**:
+
 ```
       A
      / \
@@ -675,6 +729,7 @@ Let me know if you need further assistance or clarifications!
 ### (i) Distinguish between Depth First Search (DFS) and Breadth First Search (BFS) in graph traversal.
 
 - **DFS**:
+
   - Explores as far as possible along a branch before backtracking.
   - Uses a stack (implicit or explicit).
   - Suitable for solving connectivity and pathfinding problems.
@@ -693,6 +748,7 @@ An adjacency list represents a graph as an array of lists. Each list contains th
 
 **Example**:
 For a graph with edges (1-2), (1-3), and (2-4):
+
 ```
 1: [2, 3]
 2: [1, 4]
@@ -706,8 +762,8 @@ For a graph with edges (1-2), (1-3), and (2-4):
 
 **Use Cases for Adjacency Matrix**:
 
-1. **Dense Graphs**: If the graph has many edges, the adjacency matrix is efficient because it provides  access for edge existence checks.
-2. **Memory Availability**: Adjacency matrices require  space, so they are suitable when memory is not a constraint.
+1. **Dense Graphs**: If the graph has many edges, the adjacency matrix is efficient because it provides access for edge existence checks.
+2. **Memory Availability**: Adjacency matrices require space, so they are suitable when memory is not a constraint.
 3. **Frequent Edge Queries**: When edge existence or weights need to be queried frequently.
 
 ---
@@ -800,12 +856,11 @@ def BFS(graph, start):
 **Conditions Favoring Adjacency Matrix**:
 
 1. **Dense Graphs**: A high number of edges relative to vertices.
-2. **Frequent Edge Queries**: Need for  edge existence checks.
+2. **Frequent Edge Queries**: Need for edge existence checks.
 3. **Static Graphs**: The graph structure does not change often, as adding/removing edges in a matrix is costly.
 4. **Small Graphs**: Memory overhead is not significant for small graphs.
 
 ---
-
 
 ## **Section 7: Array**
 
@@ -813,6 +868,7 @@ def BFS(graph, start):
 
 **Formula**:
 For an array `A` with base address `BA`, element size `s`, and index `i`:
+
 ```
 Address = BA + (i * s)
 ```
@@ -822,9 +878,11 @@ Address = BA + (i * s)
 ### (ii) Calculate the memory address for a 2D matrix for row-major and column-major order.
 
 - **Row-Major**:
+
   ```
   Address = BA + [(i * n) + j] * s
   ```
+
   Where `i` is the row index, `j` is the column index, `n` is the number of columns, and `s` is the size of an element.
 
 - **Column-Major**:
@@ -838,6 +896,7 @@ Address = BA + (i * s)
 #### (iii) Operations of 1D Array
 
 1. **Insertion**:
+
    - Adding a new element to the array.
    - **Algorithm**:
      1. Identify the index where the element needs to be inserted.
@@ -846,6 +905,7 @@ Address = BA + (i * s)
    - **Time Complexity**: \(O(n)\) in the worst case (if insertion is at the beginning).
 
    **C Code**:
+
    ```c
    void insertElement(int arr[], int *size, int index, int element) {
        for (int i = *size; i > index; i--) {
@@ -857,6 +917,7 @@ Address = BA + (i * s)
    ```
 
 2. **Deletion**:
+
    - Removing an element from the array.
    - **Algorithm**:
      1. Identify the index of the element to be deleted.
@@ -864,6 +925,7 @@ Address = BA + (i * s)
    - **Time Complexity**: \(O(n)\) in the worst case (if deletion is at the beginning).
 
    **C Code**:
+
    ```c
    void deleteElement(int arr[], int *size, int index) {
        for (int i = index; i < *size - 1; i++) {
@@ -874,6 +936,7 @@ Address = BA + (i * s)
    ```
 
 3. **Traversal**:
+
    - Accessing each element of the array sequentially.
    - **Algorithm**:
      1. Start from the first element.
@@ -881,6 +944,7 @@ Address = BA + (i * s)
    - **Time Complexity**: \(O(n)\).
 
    **C Code**:
+
    ```c
    void traverseArray(int arr[], int size) {
        for (int i = 0; i < size; i++) {
@@ -891,12 +955,14 @@ Address = BA + (i * s)
    ```
 
 4. **Search**:
+
    - Finding an element in the array.
    - **Types**:
      - **Linear Search**: Traverse the array to find the element (\(O(n)\)).
      - **Binary Search**: Applicable only for sorted arrays (\(O(\log n)\)).
 
    **C Code for Linear Search**:
+
    ```c
    int linearSearch(int arr[], int size, int element) {
        for (int i = 0; i < size; i++) {
@@ -909,6 +975,7 @@ Address = BA + (i * s)
    ```
 
    **C Code for Binary Search**:
+
    ```c
    int binarySearch(int arr[], int size, int element) {
        int low = 0, high = size - 1;
@@ -927,6 +994,7 @@ Address = BA + (i * s)
    ```
 
 5. **Update**:
+
    - Modifying the value of an element at a specific index.
    - **Algorithm**:
      1. Access the index directly.
@@ -934,19 +1002,19 @@ Address = BA + (i * s)
    - **Time Complexity**: \(O(1)\).
 
    **C Code**:
+
    ```c
    void updateElement(int arr[], int index, int newValue) {
        arr[index] = newValue;
    }
    ```
 
-
-
 ### Section 8: Searching & Sorting
 
 #### (i) Write pseudo code for Selection Sort and sort the array [8, 3, 1, 6, 2].
 
 **Pseudo Code**:
+
 ```python
 for i = 0 to n-1:
     min_index = i
@@ -959,6 +1027,7 @@ for i = 0 to n-1:
 **Sorted Array**: [1, 2, 3, 6, 8]
 
 **C Code**:
+
 ```c
 void selectionSort(int arr[], int n) {
     for (int i = 0; i < n - 1; i++) {
@@ -980,16 +1049,19 @@ void selectionSort(int arr[], int n) {
 #### (ii) Explain the role of pivot selection in Quick Sort. Sort the array [12, 5, 8, 3, 15, 7] using Quick Sort, assuming the first element is the pivot. Show the steps involved.
 
 **Role of Pivot Selection**:
+
 - The pivot divides the array into two partitions: elements smaller than the pivot go to the left, and elements greater go to the right.
 - The efficiency of Quick Sort depends on choosing a good pivot. A balanced partition reduces recursion depth and improves performance.
 
 **Steps for Sorting [12, 5, 8, 3, 15, 7]**:
+
 1. Pivot = 12. Partition: [5, 8, 3, 7], [15].
 2. Sort left partition [5, 8, 3, 7] with pivot = 5: [3], [8, 7].
 3. Sort right partition [8, 7] with pivot = 8: [7], [].
 4. Combine: [3, 5, 7, 8, 12, 15].
 
 **C Code**:
+
 ```c
 int partition(int arr[], int low, int high) {
     int pivot = arr[low];
@@ -1024,6 +1096,7 @@ void quickSort(int arr[], int low, int high) {
 #### (iii) Write the algorithm for binary search and demonstrate its working by finding the element 25 in the following sorted array: [10, 15, 20, 25, 30, 35].
 
 **Algorithm**:
+
 1. Initialize `low = 0` and `high = n - 1`.
 2. Calculate `mid = (low + high) / 2`.
 3. If `arr[mid] == key`, return `mid`.
@@ -1032,11 +1105,13 @@ void quickSort(int arr[], int low, int high) {
 6. Repeat until `low > high` or the element is found.
 
 **Steps for Finding 25**:
+
 1. Initial array: [10, 15, 20, 25, 30, 35]. `low = 0`, `high = 5`, `mid = 2`. `arr[mid] = 20`.
 2. Since 25 > 20, search right half. `low = 3`, `high = 5`, `mid = 4`. `arr[mid] = 25`.
 3. Element found at index 3.
 
 **C Code**:
+
 ```c
 int binarySearch(int arr[], int size, int key) {
     int low = 0, high = size - 1;
@@ -1059,15 +1134,18 @@ int binarySearch(int arr[], int size, int key) {
 #### (iv) Discuss the limitations of binary search and provide a scenario where linear search is the only feasible choice.
 
 **Limitations of Binary Search**:
+
 1. **Sorted Data**: Binary search requires the array to be sorted. It cannot be applied to unsorted data without sorting first.
 2. **Random Access**: Binary search works only on data structures that support random access, such as arrays. It is not suitable for linked lists.
 3. **Static Data**: Frequent insertions or deletions require re-sorting, making binary search inefficient for dynamic datasets.
 
 **Scenario for Linear Search**:
+
 - Linear search is preferred when the dataset is unsorted or stored in a sequential structure like a linked list.
 - Example: Searching for a specific book in an unsorted stack of books.
 
 **C Code for Linear Search**:
+
 ```c
 int linearSearch(int arr[], int size, int key) {
     for (int i = 0; i < size; i++) {
@@ -1087,10 +1165,12 @@ int linearSearch(int arr[], int size, int key) {
 Linear search is a sequential search algorithm that checks each element of the array until the desired element is found or the end of the array is reached.
 
 **Time Complexity**:
+
 - Best Case: \(O(1)\) (element found at the first position).
 - Worst Case: \(O(n)\) (element not found or at the last position).
 
 **C Code**:
+
 ```c
 int linearSearch(int arr[], int size, int key) {
     for (int i = 0; i < size; i++) {
@@ -1107,6 +1187,7 @@ int linearSearch(int arr[], int size, int key) {
 #### (vi) Write pseudo code for the Merge Sort algorithm.
 
 **Pseudo Code**:
+
 ```python
 def mergeSort(arr):
     if len(arr) > 1:
@@ -1139,6 +1220,7 @@ def mergeSort(arr):
 ```
 
 **C Code**:
+
 ```c
 void merge(int arr[], int l, int m, int r) {
     int n1 = m - l + 1;
