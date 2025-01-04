@@ -1133,3 +1133,331 @@ The choice of data structure, such as an **array** or a **linked list**, signifi
 - **Linked lists** are unsuitable for binary search because of their sequential access, which increases the complexity to \( O(n \log n) \). For linked lists, other search methods like **linear search** or modifications to leverage specific use cases are more appropriate.
 
 
+### Sorting
+
+**16. Define the term "stable sorting algorithm" and give examples of both stable and unstable sorting methods.**
+
+- A **stable sorting algorithm** maintains the relative order of records with equal keys. This means if two items have the same key, their order before and after sorting remains unchanged.
+  
+  - **Examples of stable sorting algorithms**:
+    - Bubble Sort
+    - Merge Sort
+    - Insertion Sort
+    - Counting Sort
+  
+  - **Examples of unstable sorting algorithms**:
+    - Quick Sort
+    - Heap Sort
+    - Selection Sort
+
+---
+
+**17. What scenarios lead to Quick Sort’s worst-case performance, and how can this be mitigated?**
+
+- **Worst-case performance** occurs when the pivot divides the array into highly unbalanced partitions. For example, if the smallest or largest element is always chosen as the pivot in an already sorted or reverse-sorted array.
+
+- **Mitigation strategies**:
+  - Use **randomized pivot selection**, where the pivot is chosen randomly.
+  - Use the **Median-of-Three** method to select the pivot. This involves choosing the median of the first, middle, and last elements as the pivot.
+
+---
+
+**18. Discuss the suitability of Quick Sort and Heap Sort for parallel processing, referencing the divide-and-conquer approach.**
+
+- **Quick Sort**:
+  - Well-suited for parallel processing because of its divide-and-conquer nature.
+  - Subarrays can be sorted independently, allowing efficient utilization of multiple processors.
+
+- **Heap Sort**:
+  - Less suitable for parallel processing.
+  - It operates on a single heap structure, which requires more sequential processing.
+
+---
+
+**19. Write pseudocode for the Merge Sort algorithm and explain its time complexity.**
+
+- **Pseudocode for Merge Sort**:
+
+```plaintext
+MergeSort(arr, left, right):
+  if left < right:
+    mid = (left + right) // 2
+    MergeSort(arr, left, mid)
+    MergeSort(arr, mid + 1, right)
+    Merge(arr, left, mid, right)
+```
+
+- **Time complexity**:
+  - Best, Worst, and Average: **O(n log n)**, where \(n\) is the number of elements to be sorted.
+
+---
+
+**20. Compare the time and space efficiency of Bubble Sort, Insertion Sort, and Selection Sort.**
+
+| **Algorithm**   | **Best Case Time Complexity** | **Worst Case Time Complexity** | **Space Complexity** |
+|------------------|-------------------------------|---------------------------------|-----------------------|
+| Bubble Sort      | O(n)                         | O(n^2)                         | O(1)                 |
+| Insertion Sort   | O(n)                         | O(n^2)                         | O(1)                 |
+| Selection Sort   | O(n^2)                       | O(n^2)                         | O(1)                 |
+
+---
+
+### Stack and Queue
+
+**21. Explain the LIFO principle and provide two examples where it is practically useful.**
+
+- **LIFO (Last In, First Out)**: The last element added to the stack is the first to be removed. Stacks operate based on this principle.
+
+- **Practical examples**:
+  1. **Function call stack**: Used in programming to manage function calls.
+  2. **Undo operation**: Common in text editors and other applications where the last action performed can be undone.
+
+---
+
+**22. Which data structure would you recommend for implementing an unrestricted FIFO queue? Justify your choice.**
+
+- **Recommendation**: Linked List
+
+- **Justification**:
+  - Allows efficient addition of elements at the rear and removal from the front.
+  - Overcomes the size limitations of arrays, as a linked list can dynamically grow.
+
+---
+
+**23. What is a deque (double-ended queue), and how is it different from a standard queue?**
+
+- **Deque (Double-Ended Queue)**:
+  - A data structure that allows insertion and deletion at both ends.
+
+- **Differences from a standard queue**:
+  - A standard queue permits insertion only at the rear and deletion only at the front.
+  - Deque adds flexibility with operations possible at both ends.
+
+---
+
+**24. Consider adding the elements 51, 50, 55, 53, and 52 to a queue. What would be the sequence of elements removed from the queue?**
+
+- **FIFO Order (First In, First Out)**:
+  - Elements removed: 51, 50, 55, 53, 52.
+
+---
+
+**25. Define stack overflow and describe a scenario in which it might occur.**
+
+- **Stack Overflow**: Occurs when the stack exceeds its maximum capacity, usually in systems with limited memory.
+
+- **Scenario**:
+  - Infinite recursion in a function without a base case, leading to continuous addition of function calls to the stack until memory is exhausted.
+
+---
+
+### **Stack and Queue Implementations**  
+
+**26. Describe a method to implement a stack using two queues, including the algorithm.**  
+To implement a stack using two queues, you can use one queue as the main stack and the other as a helper. Operations like `push` and `pop` are simulated by manipulating the elements between the queues.
+
+**Algorithm (using two queues `q1` and `q2`):**  
+- **Push(x):**
+  1. Enqueue `x` into `q2`.
+  2. Dequeue all elements from `q1` and enqueue them into `q2`.
+  3. Swap the names of `q1` and `q2`.
+  
+- **Pop():**
+  1. Dequeue an element from `q1` (this is the top element of the stack).
+  
+**Time Complexity:**  
+- **Push:** \(O(n)\), because all elements need to be transferred.  
+- **Pop:** \(O(1)\), as the element is dequeued directly.  
+
+---
+
+### **Linked List**
+
+**31. Compare memory allocation in linked lists with that in arrays. Highlight the differences.**
+
+| **Aspect**        | **Linked List**                                         | **Array**                                      |
+|--------------------|--------------------------------------------------------|-----------------------------------------------|
+| **Memory Allocation** | Dynamically allocated during runtime.                | Statically or dynamically allocated as a block. |
+| **Size Flexibility**   | Size can grow or shrink dynamically.                 | Fixed size at the time of allocation.          |
+| **Memory Usage**      | Extra memory needed for pointers in each node.       | No additional memory overhead for pointers.    |
+| **Access Time**       | Sequential access; slower, \(O(n)\) for an element. | Random access; faster, \(O(1)\) for an element.|
+
+---
+
+**32. What are the advantages of using linked lists over arrays? Provide examples.**
+
+1. **Dynamic Sizing**: Linked lists can grow or shrink without reallocating memory, e.g., managing dynamic datasets like social media feeds.  
+2. **Efficient Insertions/Deletions**: Adding or removing elements is \(O(1)\) if the node's pointer is known, unlike arrays, where shifting elements is required.  
+   - Example: Implementing undo functionality.  
+3. **Efficient Memory Usage**: No need to preallocate a fixed size, reducing wasted space.
+
+---
+
+**33. Differentiate between singly linked lists and doubly linked lists.**
+
+| **Aspect**              | **Singly Linked List**                           | **Doubly Linked List**                          |
+|--------------------------|-------------------------------------------------|------------------------------------------------|
+| **Pointer(s)**           | Each node has one pointer to the next node.     | Each node has two pointers: to the next and previous nodes. |
+| **Traversal Direction**  | Only forward traversal is possible.             | Supports both forward and backward traversal.  |
+| **Memory Usage**         | Less memory due to one pointer per node.        | More memory due to two pointers per node.      |
+| **Efficiency**           | Simpler to implement but limited functionality. | Better flexibility for complex operations like reverse traversal. |
+
+---
+
+**34. Write a function to reverse a singly linked list. Explain the logic used.**
+
+**Logic**:  
+Reverse the direction of the pointers between nodes by iterating through the list.  
+
+**Algorithm**:  
+1. Initialize three pointers: `prev = NULL`, `curr = head`, `next = NULL`.  
+2. While `curr` is not NULL:
+   - Store the next node: `next = curr->next`.  
+   - Reverse the current node's pointer: `curr->next = prev`.  
+   - Move pointers ahead: `prev = curr`, `curr = next`.  
+3. Update the head to `prev`.  
+
+**Illustration**:  
+Input: \(1 \to 2 \to 3 \to NULL\)  
+Output: \(3 \to 2 \to 1 \to NULL\)  
+
+---
+
+**35. Define circular linked lists. Mention one practical use case where they are preferred.**
+
+- **Definition**: A circular linked list is a linked list where the last node points back to the first node, forming a circle.  
+- **Use Case**: Efficient management of resources in round-robin scheduling (e.g., CPU process scheduling).  
+
+---
+
+
+### **Tree**  
+
+**36. What is the height of a tree? How does it relate to the levels of the tree?**  
+- **Height of a Tree**: The number of edges on the longest path from the root to a leaf.  
+- **Relation to Levels**: The height is equal to the maximum level number of the tree (considering the root is at level 0).  
+
+---
+
+**37. Explain the significance of in-order traversal in binary search trees.**  
+- **In-Order Traversal**: Visits nodes in the order: left child → root → right child.  
+- **Significance**:  
+  1. Produces a sorted sequence of elements in a binary search tree (BST).  
+  2. Useful in operations like generating ordered outputs or validating BST properties.  
+
+---
+
+**38. How can the in-order successor of a node in a binary search tree be determined?**  
+- **Steps**:  
+  1. If the node has a right subtree, the in-order successor is the leftmost node of that subtree.  
+  2. If no right subtree, traverse upward using parent pointers until you find a node for which the given node is in the left subtree.  
+
+---
+
+**39. Describe the concept of a threaded binary search tree and its benefits.**  
+- **Threaded BST**: Uses empty left and right child pointers to store "threads" pointing to the in-order predecessor or successor.  
+- **Benefits**:  
+  1. Enables in-order traversal without recursion or a stack.  
+  2. Saves space by utilizing unused pointers.  
+
+---
+
+**40. What challenges are associated with recursive implementations of BST traversals?**  
+- **Challenges**:  
+  1. **Stack Overflow**: For deep trees, recursion may exceed the system’s stack limit.  
+  2. **Extra Space**: Uses \(O(h)\) stack space, where \(h\) is the tree height.  
+  3. **Debugging Complexity**: Recursive calls can be harder to debug than iterative solutions.  
+
+---
+
+### **AVL Tree**  
+
+**41. What is an AVL tree? How does it improve upon a standard binary search tree?**  
+- **AVL Tree**: A self-balancing binary search tree where the height difference (balance factor) between left and right subtrees of any node is at most 1.  
+- **Improvements**:  
+  1. Ensures \(O(\log n)\) height for all operations, unlike standard BSTs which can degrade to \(O(n)\).  
+  2. More efficient for search, insertion, and deletion.  
+
+---
+
+**42. Provide the steps for performing a left rotation in an AVL tree.**  
+1. Let the unbalanced node be \(X\) with its right child \(Y\).  
+2. Assign \(Y\)’s left subtree to \(X\)’s right.  
+3. Make \(Y\) the new root.  
+4. Update \(X\) as the left child of \(Y\).  
+
+---
+
+**43. When is rebalancing necessary in an AVL tree? Describe the conditions that trigger it.**  
+- **Rebalancing is needed when** the balance factor (height difference) of any node exceeds 1 or is less than -1 after an insertion or deletion.  
+- **Conditions**:  
+  1. **Left-heavy**: Perform right rotation or left-right rotation.  
+  2. **Right-heavy**: Perform left rotation or right-left rotation.  
+
+---
+
+**44. How do AVL trees maintain balance and ensure efficient operations?**  
+- AVL trees use **rotations** (single or double) after insertions and deletions to maintain the balance factor within \([-1, 1]\).  
+- This ensures operations like search, insert, and delete remain efficient with \(O(\log n)\) time complexity.  
+
+---
+
+**45. List and explain the types of rotations used to restore balance in an AVL tree.**  
+1. **Right Rotation (RR)**: For left-heavy imbalance.  
+2. **Left Rotation (LL)**: For right-heavy imbalance.  
+3. **Left-Right Rotation (LR)**: For left-right imbalance.  
+4. **Right-Left Rotation (RL)**: For right-left imbalance.  
+
+---
+
+### **Graph**  
+
+**46. Distinguish between Depth First Search (DFS) and Breadth First Search (BFS) in graph traversal.**  
+| **Aspect**     | **DFS**                                      | **BFS**                                      |
+|----------------|----------------------------------------------|----------------------------------------------|
+| **Traversal**  | Explores as far as possible along a branch.  | Explores all neighbors at the current level. |
+| **Data Structure** | Stack (or recursion).                     | Queue.                                       |
+| **Time Complexity** | \(O(V + E)\).                            | \(O(V + E)\).                                |
+| **Use Case**   | Detecting cycles, topological sorting.       | Finding shortest paths in unweighted graphs. |
+
+---
+
+**47. How is a graph represented using an adjacency list? Provide an example.**  
+- **Adjacency List Representation**: Uses a list where each vertex has a sub-list of its adjacent vertices.  
+  **Example**: For a graph with edges \(A \to B, A \to C, B \to C\):  
+  ```
+  A: [B, C]
+  B: [C]
+  C: []
+  ```  
+
+---
+
+**48. When would you opt for an adjacency matrix instead of an adjacency list for graph representation?**  
+- **When to Use an Adjacency Matrix**:  
+  1. **Dense Graphs**: Many edges, as the matrix uses \(O(V^2)\) space regardless of edge count.  
+  2. **Fast Edge Lookup**: Checking edge existence is \(O(1)\).  
+
+---
+
+**49. Write pseudocode for the DFS algorithm and discuss its time complexity.**  
+
+**Pseudocode**:  
+```
+DFS(node, visited):  
+  visited[node] = True  
+  for neighbor in neighbors[node]:  
+    if not visited[neighbor]:  
+      DFS(neighbor, visited)  
+```  
+- **Time Complexity**: \(O(V + E)\), where \(V\) is the number of vertices and \(E\) is the number of edges.  
+
+---
+
+**50. What are the real-world applications of BFS? Explain with examples such as shortest path finding or web crawling.**  
+- **Shortest Path Finding**: In unweighted graphs, BFS finds the shortest path between two nodes.  
+  - Example: Social network analysis to find the degree of separation between users.  
+- **Web Crawling**: BFS is used to traverse and index web pages by exploring all links level by level.  
+
+---
+
