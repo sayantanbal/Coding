@@ -942,9 +942,9 @@ Address = BA + (i * s)
 
 
 
-## **Section 8: Searching & Sorting**
+### Section 8: Searching & Sorting
 
-### (i) Write pseudo code for Selection Sort and sort the array [8, 3, 1, 6, 2].
+#### (i) Write pseudo code for Selection Sort and sort the array [8, 3, 1, 6, 2].
 
 **Pseudo Code**:
 ```python
@@ -958,5 +958,229 @@ for i = 0 to n-1:
 
 **Sorted Array**: [1, 2, 3, 6, 8]
 
+**C Code**:
+```c
+void selectionSort(int arr[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        int min_index = i;
+        for (int j = i + 1; j < n; j++) {
+            if (arr[j] < arr[min_index]) {
+                min_index = j;
+            }
+        }
+        int temp = arr[i];
+        arr[i] = arr[min_index];
+        arr[min_index] = temp;
+    }
+}
+```
+
 ---
 
+#### (ii) Explain the role of pivot selection in Quick Sort. Sort the array [12, 5, 8, 3, 15, 7] using Quick Sort, assuming the first element is the pivot. Show the steps involved.
+
+**Role of Pivot Selection**:
+- The pivot divides the array into two partitions: elements smaller than the pivot go to the left, and elements greater go to the right.
+- The efficiency of Quick Sort depends on choosing a good pivot. A balanced partition reduces recursion depth and improves performance.
+
+**Steps for Sorting [12, 5, 8, 3, 15, 7]**:
+1. Pivot = 12. Partition: [5, 8, 3, 7], [15].
+2. Sort left partition [5, 8, 3, 7] with pivot = 5: [3], [8, 7].
+3. Sort right partition [8, 7] with pivot = 8: [7], [].
+4. Combine: [3, 5, 7, 8, 12, 15].
+
+**C Code**:
+```c
+int partition(int arr[], int low, int high) {
+    int pivot = arr[low];
+    int i = low + 1;
+    int j = high;
+    while (i <= j) {
+        while (i <= high && arr[i] <= pivot) i++;
+        while (arr[j] > pivot) j--;
+        if (i < j) {
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+    }
+    int temp = arr[low];
+    arr[low] = arr[j];
+    arr[j] = temp;
+    return j;
+}
+
+void quickSort(int arr[], int low, int high) {
+    if (low < high) {
+        int pivot_index = partition(arr, low, high);
+        quickSort(arr, low, pivot_index - 1);
+        quickSort(arr, pivot_index + 1, high);
+    }
+}
+```
+
+---
+
+#### (iii) Write the algorithm for binary search and demonstrate its working by finding the element 25 in the following sorted array: [10, 15, 20, 25, 30, 35].
+
+**Algorithm**:
+1. Initialize `low = 0` and `high = n - 1`.
+2. Calculate `mid = (low + high) / 2`.
+3. If `arr[mid] == key`, return `mid`.
+4. If `arr[mid] < key`, search the right half (`low = mid + 1`).
+5. If `arr[mid] > key`, search the left half (`high = mid - 1`).
+6. Repeat until `low > high` or the element is found.
+
+**Steps for Finding 25**:
+1. Initial array: [10, 15, 20, 25, 30, 35]. `low = 0`, `high = 5`, `mid = 2`. `arr[mid] = 20`.
+2. Since 25 > 20, search right half. `low = 3`, `high = 5`, `mid = 4`. `arr[mid] = 25`.
+3. Element found at index 3.
+
+**C Code**:
+```c
+int binarySearch(int arr[], int size, int key) {
+    int low = 0, high = size - 1;
+    while (low <= high) {
+        int mid = (low + high) / 2;
+        if (arr[mid] == key) {
+            return mid;
+        } else if (arr[mid] < key) {
+            low = mid + 1;
+        } else {
+            high = mid - 1;
+        }
+    }
+    return -1; // Element not found
+}
+```
+
+---
+
+#### (iv) Discuss the limitations of binary search and provide a scenario where linear search is the only feasible choice.
+
+**Limitations of Binary Search**:
+1. **Sorted Data**: Binary search requires the array to be sorted. It cannot be applied to unsorted data without sorting first.
+2. **Random Access**: Binary search works only on data structures that support random access, such as arrays. It is not suitable for linked lists.
+3. **Static Data**: Frequent insertions or deletions require re-sorting, making binary search inefficient for dynamic datasets.
+
+**Scenario for Linear Search**:
+- Linear search is preferred when the dataset is unsorted or stored in a sequential structure like a linked list.
+- Example: Searching for a specific book in an unsorted stack of books.
+
+**C Code for Linear Search**:
+```c
+int linearSearch(int arr[], int size, int key) {
+    for (int i = 0; i < size; i++) {
+        if (arr[i] == key) {
+            return i;
+        }
+    }
+    return -1; // Element not found
+}
+```
+
+---
+
+#### (v) What is linear search?
+
+**Definition**:
+Linear search is a sequential search algorithm that checks each element of the array until the desired element is found or the end of the array is reached.
+
+**Time Complexity**:
+- Best Case: \(O(1)\) (element found at the first position).
+- Worst Case: \(O(n)\) (element not found or at the last position).
+
+**C Code**:
+```c
+int linearSearch(int arr[], int size, int key) {
+    for (int i = 0; i < size; i++) {
+        if (arr[i] == key) {
+            return i;
+        }
+    }
+    return -1; // Element not found
+}
+```
+
+---
+
+#### (vi) Write pseudo code for the Merge Sort algorithm.
+
+**Pseudo Code**:
+```python
+def mergeSort(arr):
+    if len(arr) > 1:
+        mid = len(arr) // 2
+        left = arr[:mid]
+        right = arr[mid:]
+
+        mergeSort(left)
+        mergeSort(right)
+
+        i = j = k = 0
+        while i < len(left) and j < len(right):
+            if left[i] < right[j]:
+                arr[k] = left[i]
+                i += 1
+            else:
+                arr[k] = right[j]
+                j += 1
+            k += 1
+
+        while i < len(left):
+            arr[k] = left[i]
+            i += 1
+            k += 1
+
+        while j < len(right):
+            arr[k] = right[j]
+            j += 1
+            k += 1
+```
+
+**C Code**:
+```c
+void merge(int arr[], int l, int m, int r) {
+    int n1 = m - l + 1;
+    int n2 = r - m;
+    int L[n1], R[n2];
+
+    for (int i = 0; i < n1; i++)
+        L[i] = arr[l + i];
+    for (int j = 0; j < n2; j++)
+        R[j] = arr[m + 1 + j];
+
+    int i = 0, j = 0, k = l;
+    while (i < n1 && j < n2) {
+        if (L[i] <= R[j]) {
+            arr[k] = L[i];
+            i++;
+        } else {
+            arr[k] = R[j];
+            j++;
+        }
+        k++;
+    }
+
+    while (i < n1) {
+        arr[k] = L[i];
+        i++;
+        k++;
+    }
+
+    while (j < n2) {
+        arr[k] = R[j];
+        j++;
+        k++;
+    }
+}
+
+void mergeSort(int arr[], int l, int r) {
+    if (l < r) {
+        int m = l + (r - l) / 2;
+        mergeSort(arr, l, m);
+        mergeSort(arr, m + 1, r);
+        merge(arr, l, m, r);
+    }
+}
+```
