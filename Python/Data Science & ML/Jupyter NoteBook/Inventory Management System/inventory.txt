@@ -1,4 +1,3 @@
-1,5-Star,Chocolate,100,10
-2,Cranberries,Dried Fruits,200,200
-3,Almonds,Dried Fruits,300,100
-4,Cashews,Dried Fruits,400,100
+1, 5 Star, 10, 100
+2, Dairy Milk, 20, 50
+3, KitKat, 30, 30
