@@ -4,7 +4,6 @@
 using namespace std;
 #define EPSILON 0.01
 
-
 double func(double x)
 {
     return x * x * x * x * x - 2;
@@ -35,9 +34,14 @@ void bisection(double a, double b)
     cout << "The value of root is : " << c;
 }
 
-
 int main()
 {
+
+#ifndef ONLINE_JUDGE
+    freopen("output.txt", "w", stdout);
+    freopen("input.txt", "r", stdin);
+#endif
+
     double a = 1, b = 2;
     bisection(a, b);
     return 0;
