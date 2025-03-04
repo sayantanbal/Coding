@@ -2,10 +2,10 @@
 using namespace std;
 int main()
 {
-// #ifndef ONLINE_JUDGE
-// freopen("output.txt", "w", stdout);
-// freopen("input.txt", "r", stdin);
-// #endif
+#ifndef ONLINE_JUDGE
+freopen("output.txt", "w", stdout);
+freopen("input.txt", "r", stdin);
+#endif
 
 
 
