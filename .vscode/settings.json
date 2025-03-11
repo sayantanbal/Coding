@@ -4,6 +4,9 @@
     },
     "python.formatting.provider": "none",
     "files.associations": {
-        "stdio.h": "c"
+        "*.ejs": "html",
+        "stdio.h": "c",
+        "iostream": "cpp",
+        "ostream": "cpp"
     }
 }
