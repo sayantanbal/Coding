@@ -22,3 +22,17 @@ C++/DSA/problems/*.exe
 C++/new
 C++/new1
 C++/DSA/problems/Sayantan_231001001275
+.DS_Store
+C/Arrays/a.out
+C/Arrays/abc
+C/Arrays/abc.exe
+C/Arrays/new
+*.o
+*.exe
+*.dSYM
+build/
+bin/
+core
+*.tmp
+.vscode/
+.idea/
